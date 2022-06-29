@@ -847,15 +847,16 @@
 
         */
 
+        //=============================================
+        // 오시는길 카카오맵
         var container = document.getElementById('map');
         var options = {
             center: new kakao.maps.LatLng(37.466215511484386, 127.03282644156334),
-            level: 3 //지도의 레벨(확대, 축소 정도)
+            level: 5 //지도의 레벨(확대, 축소 정도)
         };
 
         var map = new kakao.maps.Map(container, options);
-        //=============================================
-        // 갤러리
+        
         var markerPosition = new kakao.maps.LatLng(37.466215511484386, 127.03282644156334);
 
         // 마커를 생성합니다
@@ -866,7 +867,8 @@
         // 마커가 지도 위에 표시되도록 설정합니다
         marker.setMap(map);
 
-
+        //=============================================
+        // 갤러리
         function swipeGallery01() {
             var imglen = $("#swipelistid > .swiper-slide").length;
             //console.log('이미지 갯수: '+imglen);
