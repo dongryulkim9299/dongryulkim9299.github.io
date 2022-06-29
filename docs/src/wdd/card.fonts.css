@@ -1,0 +1,2245 @@
+@font-face {
+    font-family: ridibatang;
+    src: url(../fonts/RIDIBatang.otf) format('opentype');
+    font-style: 'normal';
+    font-weight: normal
+}
+
+@font-face {
+    font-family: tmoneyroundwind;
+    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: tmoneyroundwind;
+    src: url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+.font_yeon {
+    font-family: yeon sung, cursive
+}
+
+body.ft-notosans,
+.ft-notosans {
+    font-family: noto sans kr, sans-serif
+}
+
+body.ft-myeongjo,
+.ft-myeongjo {
+    font-family: nanum myeongjo, serif
+}
+
+body.ft-ridibatang,
+.ft-ridibatang {
+    font-family: ridibatang, 'noto serif kr', serif;
+    font-weight: 400
+}
+
+body.ft-twindround,
+.ft-twindround {
+    font-family: tmoneyroundwind, 'noto serif kr', serif;
+    font-weight: 400;
+    letter-spacing: -.8px
+}
+
+body.big .more_map_link {
+    font-size: 17px
+}
+
+body.big2 .more_map_link {
+    font-size: 19px
+}
+
+body.ft-ridibatmyeongjoang .more_map_link,
+body.ft-notosans .more_map_link,
+body.ft-ridibatang .more_map_link {
+    font-size: 12px
+}
+
+body.ft-ridibatmyeongjoang.big .more_map_link,
+body.ft-notosans.big .more_map_link,
+body.ft-ridibatang.big .more_map_link {
+    font-size: 14px
+}
+
+body.ft-ridibatmyeongjoang.big2 .more_map_link,
+body.ft-notosans.big2 .more_map_link,
+body.ft-ridibatang.big2 .more_map_link {
+    font-size: 16px
+}
+
+body .typing {
+    font-size: 20px
+}
+
+.sectionHead .name {
+    font-size: 24px
+}
+
+.layer01 .title {
+    font-size: 20px
+}
+
+.layer01 .bottom .bottom_top_text {
+    font-size: 18px
+}
+
+.introLayer .introMent {
+    font-size: 17px
+}
+
+.introLayer .title2 {
+    font-size: 17px
+}
+
+.introLayer .title2>strong {
+    font-size: 18px
+}
+
+.caltit {
+    font-size: 20px
+}
+
+.calander th {
+    font-size: 14px
+}
+
+.calander td {
+    font-size: 14px
+}
+
+.subTitle.v2 {
+    font-size: 18px
+}
+
+.sectionHead .desc {
+    font-size: 14px
+}
+
+.sectionHead .desc .emp {
+    font-size: 26px
+}
+
+ul.wayto li {
+    font-size: 16px
+}
+
+ul.wayto li .n {
+    font-size: 18px
+}
+
+.notibox .title {
+    font-size: 18px
+}
+
+.notibox .note {
+    font-size: 16px
+}
+
+.accst02 .pack {
+    font-size: 17px
+}
+
+.accst02 .pack_wrap .c>li {
+    font-size: 12px
+}
+
+.accst02 .pack_wrap .c>li .b_1 {
+    font-size: 12px
+}
+
+ul.contactus.v2 li .t2 {
+    font-size: 18px
+}
+
+.subTitle.hongu {
+    font-size: 18px
+}
+
+ul.contactus.v2 li .t1 {
+    font-size: 15px
+}
+
+ul.contactus.v2.sub li .t2 {
+    font-size: 16px
+}
+
+.private-books-one .nt {
+    font-size: 16px
+}
+
+.private-books .wrt {
+    font-size: 16px
+}
+
+.private-attend-one .nt {
+    font-size: 16px
+}
+
+.private-attend .wrt {
+    font-size: 16px
+}
+
+.banner01 .cover {
+    font-size: 15px
+}
+
+.shareK {
+    font-size: 16px
+}
+
+body.big .typing {
+    font-size: 22px
+}
+
+body.big .sectionHead .name {
+    font-size: 24px
+}
+
+body.big .layer01 .title {
+    font-size: 22px
+}
+
+body.big .layer01 .bottom .bottom_top_text {
+    font-size: 20px
+}
+
+body.big .introLayer .introMent {
+    font-size: 19px
+}
+
+body.big .introLayer .title2 {
+    font-size: 19px
+}
+
+body.big .introLayer .title2>strong {
+    font-size: 20px
+}
+
+body.big .caltit {
+    font-size: 22px
+}
+
+body.big .subTitle.v2 {
+    font-size: 20px
+}
+
+body.big .sectionHead .desc {
+    font-size: 16px
+}
+
+body.big .sectionHead .desc .emp {
+    font-size: 28px
+}
+
+body.big ul.wayto li {
+    font-size: 18px
+}
+
+body.big ul.wayto li .n {
+    font-size: 20px
+}
+
+body.big .notibox .title {
+    font-size: 20px
+}
+
+body.big .notibox .note {
+    font-size: 18px
+}
+
+body.big .accst02 .pack {
+    font-size: 19px
+}
+
+body.big .accst02 .pack_wrap .c>li {
+    font-size: 14px
+}
+
+body.big .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 13px
+}
+
+body.big ul.contactus.v2 li .t2 {
+    font-size: 20px
+}
+
+body.big .subTitle.hongu {
+    font-size: 20px
+}
+
+body.big ul.contactus.v2 li .t1 {
+    font-size: 17px
+}
+
+body.big ul.contactus.v2.sub li .t2 {
+    font-size: 18px
+}
+
+body.big .private-books-one .nt {
+    font-size: 18px
+}
+
+body.big .private-books .wrt {
+    font-size: 18px
+}
+
+body.big .private-attend-one .nt {
+    font-size: 18px
+}
+
+body.big .private-attend .wrt {
+    font-size: 18px
+}
+
+body.big .banner01 .cover {
+    font-size: 17px
+}
+
+body.big .shareK {
+    font-size: 18px
+}
+
+body.big2 .typing {
+    font-size: 24px
+}
+
+body.big2 .sectionHead .name {
+    font-size: 26px
+}
+
+body.big2 .layer01 .title {
+    font-size: 24px
+}
+
+body.big2 .layer01 .bottom .bottom_top_text {
+    font-size: 22px
+}
+
+body.big2 .introLayer .introMent {
+    font-size: 21px
+}
+
+body.big2 .introLayer .title2 {
+    font-size: 21px
+}
+
+body.big2 .introLayer .title2>strong {
+    font-size: 22px
+}
+
+body.big2 .caltit {
+    font-size: 24px
+}
+
+body.big2 .subTitle.v2 {
+    font-size: 22px
+}
+
+body.big2 .sectionHead .desc {
+    font-size: 18px
+}
+
+body.big2 .sectionHead .desc .emp {
+    font-size: 30px
+}
+
+body.big2 ul.wayto li {
+    font-size: 20px
+}
+
+body.big2 ul.wayto li .n {
+    font-size: 22px
+}
+
+body.big2 .notibox .title {
+    font-size: 22px
+}
+
+body.big2 .notibox .note {
+    font-size: 20px
+}
+
+body.big2 .accst02 .pack {
+    font-size: 21px
+}
+
+body.big2 .accst02 .pack_wrap .c>li {
+    font-size: 16px
+}
+
+body.big2 .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.big2 ul.contactus.v2 li .t2 {
+    font-size: 22px
+}
+
+body.big2 .subTitle.hongu {
+    font-size: 22px
+}
+
+body.big2 ul.contactus.v2 li .t1 {
+    font-size: 19px
+}
+
+body.big2 ul.contactus.v2.sub li .t2 {
+    font-size: 19px
+}
+
+body.big2 .private-books-one .nt {
+    font-size: 18px
+}
+
+body.big2 .private-books .wrt {
+    font-size: 18px
+}
+
+body.big2 .private-attend-one .nt {
+    font-size: 18px
+}
+
+body.big2 .private-attend .wrt {
+    font-size: 18px
+}
+
+body.big2 .banner01 .cover {
+    font-size: 19px
+}
+
+body.big2 .shareK {
+    font-size: 20px
+}
+
+body.ft-ridibatang .bgmbar>p {
+    font-size: 12px
+}
+
+body.ft-ridibatang .typing {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang .sectionHead .name {
+    font-size: 18px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang .layer01 .title {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang .layer01 .bottom .bottom_top_text {
+    font-size: 15px
+}
+
+body.ft-ridibatang .introLayer .introMent {
+    font-size: 14px;
+    letter-spacing: -.5px
+}
+
+body.ft-ridibatang .introLayer .title2 {
+    font-size: 14px
+}
+
+body.ft-ridibatang .introLayer .title2>strong {
+    font-size: 15px;
+    font-weight: 500
+}
+
+body.ft-ridibatang .caltit {
+    font-size: 17px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang .calander th {
+    font-size: 12px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang .calander td {
+    font-size: 13px;
+    letter-spacing: -1.5px
+}
+
+body.ft-ridibatang .subTitle.v2 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+body.ft-ridibatang .sectionHead .desc {
+    font-size: 12px
+}
+
+body.ft-ridibatang .sectionHead .desc .emp {
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 600
+}
+
+body.ft-ridibatang ul.wayto li {
+    font-size: 13px
+}
+
+body.ft-ridibatang ul.wayto li .n {
+    font-size: 14px;
+    font-weight: 400
+}
+
+body.ft-ridibatang .notibox .title {
+    font-size: 14px
+}
+
+body.ft-ridibatang .notibox .note {
+    font-size: 13px
+}
+
+body.ft-ridibatang .accst02 .pack {
+    font-size: 14px
+}
+
+body.ft-ridibatang .accst02 .pack_wrap .c>li {
+    font-size: 12px
+}
+
+body.ft-ridibatang .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 12px
+}
+
+body.ft-ridibatang ul.contactus.v2 li .t2 {
+    font-size: 15px
+}
+
+body.ft-ridibatang .subTitle.hongu {
+    font-size: 14px
+}
+
+body.ft-ridibatang ul.contactus.v2 li .t1 {
+    font-size: 13px
+}
+
+body.ft-ridibatang ul.contactus.v2.sub li .t2 {
+    font-size: 13px;
+    color: #333
+}
+
+body.ft-ridibatang ul.contactus.v2.sub li .t2 strong {
+    font-size: 13px;
+    color: #000
+}
+
+body.ft-ridibatang ul li .bttn {
+    font-size: 12px
+}
+
+body.ft-ridibatang .private-books-one .nt {
+    font-size: 14px
+}
+
+body.ft-ridibatang .private-books .wrt {
+    font-size: 13px
+}
+
+body.ft-ridibatang .private-attend-one .nt {
+    font-size: 14px
+}
+
+body.ft-ridibatang .private-attend .wrt {
+    font-size: 13px
+}
+
+body.ft-ridibatang .books li {
+    font-size: 12px
+}
+
+body.ft-ridibatang .books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+body.ft-ridibatang .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-ridibatang .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-ridibatang .banner01 .cover {
+    font-size: 12px
+}
+
+body.ft-ridibatang .shareK {
+    font-size: 13px
+}
+
+body.ft-ridibatang.big .typing {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big .sectionHead .name {
+    font-size: 20px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big .layer01 .title {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big .layer01 .bottom .bottom_top_text {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big .introLayer .introMent {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big .introLayer .title2 {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big .introLayer .title2>strong {
+    font-size: 17px;
+    font-weight: 500
+}
+
+body.ft-ridibatang.big .caltit {
+    font-size: 19px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big .subTitle.v2 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+body.ft-ridibatang.big .sectionHead .desc {
+    font-size: 14px
+}
+
+body.ft-ridibatang.big .sectionHead .desc .emp {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big ul.wayto li {
+    font-size: 15px
+}
+
+body.ft-ridibatang.big ul.wayto li .n {
+    font-size: 16px;
+    font-weight: 400
+}
+
+body.ft-ridibatang.big .notibox .title {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big .notibox .note {
+    font-size: 15px
+}
+
+body.ft-ridibatang.big .accst02 .pack {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big .accst02 .pack_wrap .c>li {
+    font-size: 14px
+}
+
+body.ft-ridibatang.big .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-ridibatang.big ul.contactus.v2 li .t2 {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big .subTitle.hongu {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big ul.contactus.v2 li .t1 {
+    font-size: 15px
+}
+
+body.ft-ridibatang.big ul.contactus.v2.sub li .t2 {
+    font-size: 15px;
+    color: #333
+}
+
+body.ft-ridibatang.big ul.contactus.v2.sub li .t2 strong {
+    font-size: 15px;
+    color: #000
+}
+
+body.ft-ridibatang.big .private-books-one .nt {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big .private-books .wrt {
+    font-size: 15px
+}
+
+body.ft-ridibatang.big .private-attend-one .nt {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big .private-attend .wrt {
+    font-size: 15px
+}
+
+body.ft-ridibatang.big .books li {
+    font-size: 12px
+}
+
+body.ft-ridibatang.big .books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+body.ft-ridibatang.big .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-ridibatang.big .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-ridibatang.big .banner01 .cover {
+    font-size: 14px
+}
+
+body.ft-ridibatang.big .shareK {
+    font-size: 15px
+}
+
+body.ft-ridibatang.big2 .typing {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big2 .sectionHead .name {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big2 .layer01 .title {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big2 .layer01 .bottom .bottom_top_text {
+    font-size: 19px
+}
+
+body.ft-ridibatang.big2 .introLayer .introMent {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 .introLayer .title2 {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 .introLayer .title2>strong {
+    font-size: 19px;
+    font-weight: 500
+}
+
+body.ft-ridibatang.big2 .caltit {
+    font-size: 21px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big2 .subTitle.v2 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+body.ft-ridibatang.big2 .sectionHead .desc {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big2 .sectionHead .desc .emp {
+    font-size: 24px;
+    letter-spacing: -1px
+}
+
+body.ft-ridibatang.big2 ul.wayto li {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big2 ul.wayto li .n {
+    font-size: 18px;
+    font-weight: 400
+}
+
+body.ft-ridibatang.big2 .notibox .title {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 .notibox .note {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big2 .accst02 .pack {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 .accst02 .pack_wrap .c>li {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big2 .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-ridibatang.big2 ul.contactus.v2 li .t2 {
+    font-size: 19px
+}
+
+body.ft-ridibatang.big2 .subTitle.hongu {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 ul.contactus.v2 li .t1 {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big2 ul.contactus.v2.sub li .t2 {
+    font-size: 17px;
+    color: #333
+}
+
+body.ft-ridibatang.big2 ul.contactus.v2.sub li .t2 strong {
+    font-size: 17px;
+    color: #000
+}
+
+body.ft-ridibatang.big2 .private-books-one .nt {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 .private-books .wrt {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big2 .private-attend-one .nt {
+    font-size: 18px
+}
+
+body.ft-ridibatang.big2 .private-attend .wrt {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big2 .books li {
+    font-size: 12px
+}
+
+body.ft-ridibatang.big2 .books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+body.ft-ridibatang.big2 .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-ridibatang.big2 .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-ridibatang.big2 .banner01 .cover {
+    font-size: 16px
+}
+
+body.ft-ridibatang.big2 .shareK {
+    font-size: 17px
+}
+
+body.ft-ridibatang.big2 .pop_acct .bx {
+    font-size: 16px
+}
+
+body.ft-notosans ul li .bttn {
+    font-size: 12px
+}
+
+body.ft-notosans .typing {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-notosans .sectionHead .name {
+    font-size: 18px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans .layer01 .title {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-notosans .layer01 .bottom .bottom_top_text {
+    font-size: 15px
+}
+
+body.ft-notosans .introLayer .introMent {
+    font-size: 14px
+}
+
+body.ft-notosans .introLayer .title2 {
+    font-size: 14px
+}
+
+body.ft-notosans .introLayer .title2>strong {
+    font-size: 15px;
+    font-weight: 500
+}
+
+body.ft-notosans .caltit {
+    font-size: 17px;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+body.ft-notosans .calander th {
+    font-size: 12px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans .calander td {
+    font-size: 13px;
+    letter-spacing: -1.5px
+}
+
+body.ft-notosans .subTitle.v2 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -.25px
+}
+
+body.ft-notosans .sectionHead .desc {
+    font-size: 12px
+}
+
+body.ft-notosans .sectionHead .desc .emp {
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+body.ft-notosans ul.wayto li {
+    font-size: 13px
+}
+
+body.ft-notosans ul.wayto li .n {
+    font-size: 14px;
+    font-weight: 400
+}
+
+body.ft-notosans .notibox .title {
+    font-size: 14px
+}
+
+body.ft-notosans .notibox .note {
+    font-size: 13px
+}
+
+body.ft-notosans .accst02 .pack {
+    font-size: 14px
+}
+
+body.ft-notosans .accst02 .pack_wrap .c>li {
+    font-size: 12px
+}
+
+body.ft-notosans .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 12px
+}
+
+body.ft-notosans ul.contactus.v2 li .t2 {
+    font-size: 15px
+}
+
+body.ft-notosans .subTitle.hongu {
+    font-size: 14px
+}
+
+body.ft-notosans ul.contactus.v2 li .t1 {
+    font-size: 13px
+}
+
+body.ft-notosans ul.contactus.v2.sub li .t2 {
+    font-size: 13px;
+    color: #333
+}
+
+body.ft-notosans ul.contactus.v2.sub li .t2 strong {
+    font-size: 13px;
+    color: #000
+}
+
+body.ft-notosans .private-books-one .nt {
+    font-size: 14px
+}
+
+body.ft-notosans .private-books .wrt {
+    font-size: 13px
+}
+
+body.ft-notosans .private-attend-one .nt {
+    font-size: 14px
+}
+
+body.ft-notosans .private-attend .wrt {
+    font-size: 13px
+}
+
+body.ft-notosans .books li {
+    font-size: 12px
+}
+
+body.ft-notosans .books li .n {
+    line-height: 1.6;
+    -webkit-line-clamp: 6;
+    margin-top: 5px
+}
+
+body.ft-notosans .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-notosans .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-notosans .banner01 .cover {
+    font-size: 12px
+}
+
+body.ft-notosans .shareK {
+    font-size: 13px
+}
+
+body.ft-notosans.big .typing {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big .sectionHead .name {
+    font-size: 20px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big .layer01 .title {
+    font-size: 19px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big .layer01 .bottom .bottom_top_text {
+    font-size: 17px
+}
+
+body.ft-notosans.big .introLayer .introMent {
+    font-size: 16px
+}
+
+body.ft-notosans.big .introLayer .title2 {
+    font-size: 16px
+}
+
+body.ft-notosans.big .introLayer .title2>strong {
+    font-size: 17px;
+    font-weight: 500
+}
+
+body.ft-notosans.big .caltit {
+    font-size: 19px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big .subTitle.v2 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.25px
+}
+
+body.ft-notosans.big .sectionHead .desc {
+    font-size: 14px
+}
+
+body.ft-notosans.big .sectionHead .desc .emp {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big ul.wayto li {
+    font-size: 15px
+}
+
+body.ft-notosans.big ul.wayto li .n {
+    font-size: 16px;
+    font-weight: 400
+}
+
+body.ft-notosans.big .notibox .title {
+    font-size: 16px
+}
+
+body.ft-notosans.big .notibox .note {
+    font-size: 15px
+}
+
+body.ft-notosans.big .accst02 .pack {
+    font-size: 16px
+}
+
+body.ft-notosans.big .accst02 .pack_wrap .c>li {
+    font-size: 14px
+}
+
+body.ft-notosans.big .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-notosans.big ul.contactus.v2 li .t2 {
+    font-size: 17px
+}
+
+body.ft-notosans.big .subTitle.hongu {
+    font-size: 16px
+}
+
+body.ft-notosans.big ul.contactus.v2 li .t1 {
+    font-size: 15px
+}
+
+body.ft-notosans.big ul.contactus.v2.sub li .t2 {
+    font-size: 15px;
+    color: #333
+}
+
+body.ft-notosans.big ul.contactus.v2.sub li .t2 strong {
+    font-size: 15px;
+    color: #000
+}
+
+body.ft-notosans.big .private-books-one .nt {
+    font-size: 16px
+}
+
+body.ft-notosans.big .private-books .wrt {
+    font-size: 15px
+}
+
+body.ft-notosans.big .private-attend-one .nt {
+    font-size: 16px
+}
+
+body.ft-notosans.big .private-attend .wrt {
+    font-size: 15px
+}
+
+body.ft-notosans.big .books li {
+    font-size: 12px
+}
+
+body.ft-notosans.big .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-notosans.big .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-notosans.big .banner01 .cover {
+    font-size: 14px
+}
+
+body.ft-notosans.big .shareK {
+    font-size: 15px
+}
+
+body.ft-notosans.big2 .typing {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big2 .sectionHead .name {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big2 .layer01 .title {
+    font-size: 21px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big2 .layer01 .bottom .bottom_top_text {
+    font-size: 19px
+}
+
+body.ft-notosans.big2 .introLayer .introMent {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 .introLayer .title2 {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 .introLayer .title2>strong {
+    font-size: 19px;
+    font-weight: 500
+}
+
+body.ft-notosans.big2 .caltit {
+    font-size: 21px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big2 .subTitle.v2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.25px
+}
+
+body.ft-notosans.big2 .sectionHead .desc {
+    font-size: 16px
+}
+
+body.ft-notosans.big2 .sectionHead .desc .emp {
+    font-size: 24px;
+    letter-spacing: -1px
+}
+
+body.ft-notosans.big2 ul.wayto li {
+    font-size: 17px
+}
+
+body.ft-notosans.big2 ul.wayto li .n {
+    font-size: 18px;
+    font-weight: 400
+}
+
+body.ft-notosans.big2 .notibox .title {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 .notibox .note {
+    font-size: 17px
+}
+
+body.ft-notosans.big2 .accst02 .pack {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 .accst02 .pack_wrap .c>li {
+    font-size: 16px
+}
+
+body.ft-notosans.big2 .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-notosans.big2 ul.contactus.v2 li .t2 {
+    font-size: 19px
+}
+
+body.ft-notosans.big2 .subTitle.hongu {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 ul.contactus.v2 li .t1 {
+    font-size: 17px
+}
+
+body.ft-notosans.big2 ul.contactus.v2.sub li .t2 {
+    font-size: 17px;
+    color: #333
+}
+
+body.ft-notosans.big2 ul.contactus.v2.sub li .t2 strong {
+    font-size: 17px;
+    color: #000
+}
+
+body.ft-notosans.big2 .private-books-one .nt {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 .private-books .wrt {
+    font-size: 16px
+}
+
+body.ft-notosans.big2 .private-attend-one .nt {
+    font-size: 18px
+}
+
+body.ft-notosans.big2 .private-attend .wrt {
+    font-size: 16px
+}
+
+body.ft-notosans.big2 .books li {
+    font-size: 12px
+}
+
+body.ft-notosans.big2 .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-notosans.big2 .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-notosans.big2 .banner01 .cover {
+    font-size: 16px
+}
+
+body.ft-notosans.big2 .shareK {
+    font-size: 17px
+}
+
+body.ft-myeongjo .bgmbar>p {
+    font-size: 12px
+}
+
+body.ft-myeongjo ul li .bttn {
+    font-size: 12px
+}
+
+body.ft-myeongjo .typing {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo .sectionHead .name {
+    font-size: 18px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo .layer01 .title {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo .layer01 .bottom .bottom_top_text {
+    font-size: 15px
+}
+
+body.ft-myeongjo .introLayer .introMent {
+    font-size: 14px
+}
+
+body.ft-myeongjo .introLayer .title2 {
+    font-size: 14px
+}
+
+body.ft-myeongjo .introLayer .title2>strong {
+    font-size: 15px;
+    font-weight: 600
+}
+
+body.ft-myeongjo .caltit {
+    font-size: 17px;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+body.ft-myeongjo .calander th {
+    font-size: 12px;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+body.ft-myeongjo .calander td {
+    font-size: 13px;
+    letter-spacing: -1.5px;
+    font-weight: 700
+}
+
+body.ft-myeongjo .subTitle.v2 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -.25px
+}
+
+body.ft-myeongjo .sectionHead .desc {
+    font-size: 12px
+}
+
+body.ft-myeongjo .sectionHead .desc .emp {
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 700
+}
+
+body.ft-myeongjo ul.wayto li {
+    font-size: 13px
+}
+
+body.ft-myeongjo ul.wayto li .n {
+    font-size: 14px;
+    font-weight: 700
+}
+
+body.ft-myeongjo .notibox .title {
+    font-size: 14px;
+    font-weight: 700
+}
+
+body.ft-myeongjo .notibox .note {
+    font-size: 13px
+}
+
+body.ft-myeongjo .accst02 .pack {
+    font-size: 14px
+}
+
+body.ft-myeongjo .accst02 .pack_wrap .c>li {
+    font-size: 12px
+}
+
+body.ft-myeongjo .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 12px
+}
+
+body.ft-myeongjo ul.contactus.v2 li .t2 {
+    font-size: 15px
+}
+
+body.ft-myeongjo .subTitle.hongu {
+    font-size: 14px
+}
+
+body.ft-myeongjo ul.contactus.v2 li .t1 {
+    font-size: 13px
+}
+
+body.ft-myeongjo ul.contactus.v2.sub li .t2 {
+    font-size: 13px;
+    color: #333
+}
+
+body.ft-myeongjo ul.contactus.v2.sub li .t2 strong {
+    font-size: 13px;
+    color: #000
+}
+
+body.ft-myeongjo .private-books-one .nt {
+    font-size: 14px
+}
+
+body.ft-myeongjo .private-books .wrt {
+    font-size: 13px
+}
+
+body.ft-myeongjo .private-attend-one .nt {
+    font-size: 14px
+}
+
+body.ft-myeongjo .private-attend .wrt {
+    font-size: 13px
+}
+
+body.ft-myeongjo .books li {
+    font-size: 12px
+}
+
+body.ft-myeongjo .books li .n {
+    line-height: 1.6;
+    -webkit-line-clamp: 6;
+    margin-top: 5px
+}
+
+body.ft-myeongjo .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-myeongjo .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-myeongjo .banner01 .cover {
+    font-size: 12px
+}
+
+body.ft-myeongjo .shareK {
+    font-size: 13px
+}
+
+body.ft-myeongjo.big .typing {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big .sectionHead .name {
+    font-size: 20px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big .layer01 .title {
+    font-size: 19px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big .layer01 .bottom .bottom_top_text {
+    font-size: 17px
+}
+
+body.ft-myeongjo.big .introLayer .introMent {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big .introLayer .title2 {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big .introLayer .title2>strong {
+    font-size: 17px;
+    font-weight: 500
+}
+
+body.ft-myeongjo.big .caltit {
+    font-size: 19px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big .subTitle.v2 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.25px
+}
+
+body.ft-myeongjo.big .sectionHead .desc {
+    font-size: 14px
+}
+
+body.ft-myeongjo.big .sectionHead .desc .emp {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big ul.wayto li {
+    font-size: 15px
+}
+
+body.ft-myeongjo.big ul.wayto li .n {
+    font-size: 16px;
+    font-weight: 400
+}
+
+body.ft-myeongjo.big .notibox .title {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big .notibox .note {
+    font-size: 15px
+}
+
+body.ft-myeongjo.big .accst02 .pack {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big .accst02 .pack_wrap .c>li {
+    font-size: 14px
+}
+
+body.ft-myeongjo.big .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-myeongjo.big ul.contactus.v2 li .t2 {
+    font-size: 17px
+}
+
+body.ft-myeongjo.big .subTitle.hongu {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big ul.contactus.v2 li .t1 {
+    font-size: 15px
+}
+
+body.ft-myeongjo.big ul.contactus.v2.sub li .t2 {
+    font-size: 15px;
+    color: #333
+}
+
+body.ft-myeongjo.big ul.contactus.v2.sub li .t2 strong {
+    font-size: 15px;
+    color: #000
+}
+
+body.ft-myeongjo.big .private-books-one .nt {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big .private-books .wrt {
+    font-size: 15px
+}
+
+body.ft-myeongjo.big .private-attend-one .nt {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big .private-attend .wrt {
+    font-size: 15px
+}
+
+body.ft-myeongjo.big .books li {
+    font-size: 12px
+}
+
+body.ft-myeongjo.big .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-myeongjo.big .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-myeongjo.big .banner01 .cover {
+    font-size: 14px
+}
+
+body.ft-myeongjo.big .shareK {
+    font-size: 15px
+}
+
+body.ft-myeongjo.big2 .typing {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big2 .sectionHead .name {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big2 .layer01 .title {
+    font-size: 21px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big2 .layer01 .bottom .bottom_top_text {
+    font-size: 19px
+}
+
+body.ft-myeongjo.big2 .introLayer .introMent {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 .introLayer .title2 {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 .introLayer .title2>strong {
+    font-size: 19px;
+    font-weight: 500
+}
+
+body.ft-myeongjo.big2 .caltit {
+    font-size: 21px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big2 .subTitle.v2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.25px
+}
+
+body.ft-myeongjo.big2 .sectionHead .desc {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big2 .sectionHead .desc .emp {
+    font-size: 24px;
+    letter-spacing: -1px
+}
+
+body.ft-myeongjo.big2 ul.wayto li {
+    font-size: 17px
+}
+
+body.ft-myeongjo.big2 ul.wayto li .n {
+    font-size: 18px;
+    font-weight: 400
+}
+
+body.ft-myeongjo.big2 .notibox .title {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 .notibox .note {
+    font-size: 17px
+}
+
+body.ft-myeongjo.big2 .accst02 .pack {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 .accst02 .pack_wrap .c>li {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big2 .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-myeongjo.big2 ul.contactus.v2 li .t2 {
+    font-size: 19px
+}
+
+body.ft-myeongjo.big2 .subTitle.hongu {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 ul.contactus.v2 li .t1 {
+    font-size: 17px
+}
+
+body.ft-myeongjo.big2 ul.contactus.v2.sub li .t2 {
+    font-size: 17px;
+    color: #333
+}
+
+body.ft-myeongjo.big2 ul.contactus.v2.sub li .t2 strong {
+    font-size: 17px;
+    color: #000
+}
+
+body.ft-myeongjo.big2 .private-books-one .nt {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 .private-books .wrt {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big2 .private-attend-one .nt {
+    font-size: 18px
+}
+
+body.ft-myeongjo.big2 .private-attend .wrt {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big2 .books li {
+    font-size: 12px
+}
+
+body.ft-myeongjo.big2 .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-myeongjo.big2 .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-myeongjo.big2 .banner01 .cover {
+    font-size: 16px
+}
+
+body.ft-myeongjo.big2 .shareK {
+    font-size: 17px
+}
+
+body.ft-twindround .bgmbar>p {
+    font-size: 12px
+}
+
+body.ft-twindround .notibox .note {
+    line-height: 1.6
+}
+
+body.ft-twindround .typing {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-twindround .sectionHead .name {
+    font-size: 18px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround .layer01 .title {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+body.ft-twindround .layer01 .bottom .bottom_top_text {
+    font-size: 15px
+}
+
+body.ft-twindround .introLayer .introMent {
+    font-size: 14px;
+    letter-spacing: -.5px
+}
+
+body.ft-twindround .introLayer .title2 {
+    font-size: 14px
+}
+
+body.ft-twindround .introLayer .title2>strong {
+    font-size: 15px;
+    font-weight: 500
+}
+
+body.ft-twindround .caltit {
+    font-size: 17px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround .calander th {
+    font-size: 12px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround .calander td {
+    font-size: 13px;
+    letter-spacing: -1.5px
+}
+
+body.ft-twindround .subTitle.v2 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+body.ft-twindround .sectionHead .desc {
+    font-size: 12px
+}
+
+body.ft-twindround .sectionHead .desc .emp {
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 600
+}
+
+body.ft-twindround ul.wayto li {
+    font-size: 13px
+}
+
+body.ft-twindround ul.wayto li .n {
+    font-size: 14px;
+    font-weight: 400
+}
+
+body.ft-twindround .notibox .title {
+    font-size: 14px
+}
+
+body.ft-twindround .notibox .note {
+    font-size: 13px
+}
+
+body.ft-twindround .accst02 .pack {
+    font-size: 14px
+}
+
+body.ft-twindround .accst02 .pack_wrap .c>li {
+    font-size: 12px
+}
+
+body.ft-twindround .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 12px
+}
+
+body.ft-twindround ul.contactus.v2 li .t2 {
+    font-size: 15px
+}
+
+body.ft-twindround .subTitle.hongu {
+    font-size: 14px
+}
+
+body.ft-twindround ul.contactus.v2 li .t1 {
+    font-size: 13px
+}
+
+body.ft-twindround ul.contactus.v2.sub li .t2 {
+    font-size: 13px;
+    color: #333
+}
+
+body.ft-twindround ul.contactus.v2.sub li .t2 strong {
+    font-size: 13px;
+    color: #000
+}
+
+body.ft-twindround ul li .bttn {
+    font-size: 12px
+}
+
+body.ft-twindround .private-books-one .nt {
+    font-size: 14px
+}
+
+body.ft-twindround .private-books .wrt {
+    font-size: 13px
+}
+
+body.ft-twindround .private-attend-one .nt {
+    font-size: 14px;
+    line-height: 1.6
+}
+
+body.ft-twindround .private-attend .wrt {
+    font-size: 13px
+}
+
+body.ft-twindround .books li {
+    font-size: 12px
+}
+
+body.ft-twindround .books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+body.ft-twindround .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-twindround .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-twindround .banner01 .cover {
+    font-size: 12px
+}
+
+body.ft-twindround .shareK {
+    font-size: 13px
+}
+
+body.ft-twindround.big .typing {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big .sectionHead .name {
+    font-size: 20px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big .layer01 .title {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big .layer01 .bottom .bottom_top_text {
+    font-size: 17px
+}
+
+body.ft-twindround.big .introLayer .introMent {
+    font-size: 16px
+}
+
+body.ft-twindround.big .introLayer .title2 {
+    font-size: 16px
+}
+
+body.ft-twindround.big .introLayer .title2>strong {
+    font-size: 17px;
+    font-weight: 500
+}
+
+body.ft-twindround.big .caltit {
+    font-size: 19px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big .subTitle.v2 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+body.ft-twindround.big .sectionHead .desc {
+    font-size: 14px
+}
+
+body.ft-twindround.big .sectionHead .desc .emp {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big ul.wayto li {
+    font-size: 15px
+}
+
+body.ft-twindround.big ul.wayto li .n {
+    font-size: 16px;
+    font-weight: 400
+}
+
+body.ft-twindround.big .notibox .title {
+    font-size: 16px
+}
+
+body.ft-twindround.big .notibox .note {
+    font-size: 15px
+}
+
+body.ft-twindround.big .accst02 .pack {
+    font-size: 16px
+}
+
+body.ft-twindround.big .accst02 .pack_wrap .c>li {
+    font-size: 14px
+}
+
+body.ft-twindround.big .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-twindround.big ul.contactus.v2 li .t2 {
+    font-size: 17px
+}
+
+body.ft-twindround.big .subTitle.hongu {
+    font-size: 16px
+}
+
+body.ft-twindround.big ul.contactus.v2 li .t1 {
+    font-size: 15px
+}
+
+body.ft-twindround.big ul.contactus.v2.sub li .t2 {
+    font-size: 15px;
+    color: #333
+}
+
+body.ft-twindround.big ul.contactus.v2.sub li .t2 strong {
+    font-size: 15px;
+    color: #000
+}
+
+body.ft-twindround.big .private-books-one .nt {
+    font-size: 16px
+}
+
+body.ft-twindround.big .private-books .wrt {
+    font-size: 15px
+}
+
+body.ft-twindround.big .private-attend-one .nt {
+    font-size: 16px
+}
+
+body.ft-twindround.big .private-attend .wrt {
+    font-size: 15px
+}
+
+body.ft-twindround.big .books li {
+    font-size: 12px
+}
+
+body.ft-twindround.big .books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+body.ft-twindround.big .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-twindround.big .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-twindround.big .banner01 .cover {
+    font-size: 14px
+}
+
+body.ft-twindround.big .shareK {
+    font-size: 15px
+}
+
+body.ft-twindround.big2 .typing {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big2 .sectionHead .name {
+    font-size: 22px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big2 .layer01 .title {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big2 .layer01 .bottom .bottom_top_text {
+    font-size: 19px
+}
+
+body.ft-twindround.big2 .introLayer .introMent {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 .introLayer .title2 {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 .introLayer .title2>strong {
+    font-size: 19px;
+    font-weight: 500
+}
+
+body.ft-twindround.big2 .caltit {
+    font-size: 21px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big2 .subTitle.v2 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+body.ft-twindround.big2 .sectionHead .desc {
+    font-size: 16px
+}
+
+body.ft-twindround.big2 .sectionHead .desc .emp {
+    font-size: 24px;
+    letter-spacing: -1px
+}
+
+body.ft-twindround.big2 ul.wayto li {
+    font-size: 17px
+}
+
+body.ft-twindround.big2 ul.wayto li .n {
+    font-size: 18px;
+    font-weight: 400
+}
+
+body.ft-twindround.big2 .notibox .title {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 .notibox .note {
+    font-size: 17px
+}
+
+body.ft-twindround.big2 .accst02 .pack {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 .accst02 .pack_wrap .c>li {
+    font-size: 16px
+}
+
+body.ft-twindround.big2 .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 14px
+}
+
+body.ft-twindround.big2 ul.contactus.v2 li .t2 {
+    font-size: 19px
+}
+
+body.ft-twindround.big2 .subTitle.hongu {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 ul.contactus.v2 li .t1 {
+    font-size: 17px
+}
+
+body.ft-twindround.big2 ul.contactus.v2.sub li .t2 {
+    font-size: 17px;
+    color: #333
+}
+
+body.ft-twindround.big2 ul.contactus.v2.sub li .t2 strong {
+    font-size: 17px;
+    color: #000
+}
+
+body.ft-twindround.big2 .private-books-one .nt {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 .private-books .wrt {
+    font-size: 17px
+}
+
+body.ft-twindround.big2 .private-attend-one .nt {
+    font-size: 18px
+}
+
+body.ft-twindround.big2 .private-attend .wrt {
+    font-size: 17px
+}
+
+body.ft-twindround.big2 .books li {
+    font-size: 12px
+}
+
+body.ft-twindround.big2 .books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+body.ft-twindround.big2 .books li .b {
+    padding: 15px 8px 10px
+}
+
+body.ft-twindround.big2 .books li .bottom {
+    font-size: 12px
+}
+
+body.ft-twindround.big2 .banner01 .cover {
+    font-size: 16px
+}
+
+body.ft-twindround.big2 .shareK {
+    font-size: 17px
+}
+
+body.ft-twindround.big2 .pop_acct .bx {
+    font-size: 16px
+}
