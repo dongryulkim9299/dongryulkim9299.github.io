@@ -97,7 +97,7 @@
                     <div class="typing f20"></div>
                 </div>
             </div>
-            <img class="daycard" src="src\img\logo_white.svg" style="height: 16px;" />
+            <img class="daycard" src="" style="height: 16px;" />
         </div>
     </div>-->
 
@@ -265,6 +265,150 @@
                 outline: none;
             }
         </style>
+
+        <div class="sectionMg gallLayerWrapper layer layer03 clearfix">
+            <div class="sectionHead anibox hd visible animated fadeInUp full-visible" style="padding: 30px 0px 30px 0px"><span class="name">웨딩 갤러리</span>
+            </div>
+
+            <div class="clearfix anibox hd visible animated fadeInUp">
+              <div class="gallGridWrapper">
+                <div class="item" style="background-image: url(storage/images/5659/gal1.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal2.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal3.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal4.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal5.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal6.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal7.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal8.jpg);"></div>
+                <div class="item" style="background-image: url(storage/images/5659/gal9.jpg);"></div>
+              </div>
+            </div>
+
+
+              <div class="zoomGallWrapper">
+                <a class="close"><img src="src/img/close.svg"></a>
+                <div id="fullbox">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="storage/images/5659/gal1.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="storage/images/5659/gal2.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="storage/images/5659/gal3.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="storage/images/5659/gal4.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="/storage/images/5659/gal5.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="/storage/images/5659/gal6.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="/storage/images/5659/gal7.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="/storage/images/5659/gal8.jpg">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-zoom-container">
+                        <img class="vs imgblk" src="/storage/images/5659/gal9.jpg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next swiper-opts"></div>
+                  <div class="swiper-button-prev swiper-opts"></div>
+                  <div class="swiper-pagination swiper-opts"></div>
+                </div>
+              </div>
+              <script>
+
+
+                var fullboxSwiper = null;
+                var g_posY = 0;
+
+                window.addEventListener('popstate', function(event) {
+                  if($(".zoomGallWrapper").is(":visible")) {
+                    zoomGallClose();
+                  }
+                });
+
+                function zoomGallClose() {
+
+                  $(".zoomGallWrapper").css("display", "none");
+
+                  $("html,body").css("overflow", "visible");
+                  $(window).scrollTop(g_posY);
+
+                }
+                function zoomGallOpen(imgNumb) {
+
+
+                  history.pushState(null, null, "#");
+
+                  g_posY = $(window).scrollTop();
+                  $("html,body").css("overflow", "hidden");
+
+                  $(".zoomGallWrapper").css("display", "block");
+
+                  if(fullboxSwiper==null){
+                    fullboxSwiper = new Swiper("#fullbox", {
+                        pagination: {
+                          el: "#fullbox .swiper-pagination",
+                          dynamicBullets: true,
+                        },
+                        navigation: {
+                          nextEl: "#fullbox .swiper-button-next",
+                          prevEl: "#fullbox .swiper-button-prev",
+                        },
+                        observer: true,
+                        observeParents: true,
+                      });
+
+                      $(".zoomGallWrapper .close").click(function(e){
+                        e.preventDefault();
+                        e.stopImmediatePropagation();
+                        $(".zoomGallWrapper").css("display", "none");
+
+                        //console.log("posY:"+g_posY);
+                        $("html,body").css("overflow", "visible");
+                        $(window).scrollTop(g_posY);
+                      });
+
+                    }else{
+                      fullboxSwiper.init();
+                    }
+                    fullboxSwiper.slideTo(parseInt(imgNumb), 100);
+
+                  }
+
+
+                </script>
+              </div>
+
+
+
+
+<!--
         <div class="sectionMg gallLayerWrapper layer layer03 clearfix">
             <div class="sectionHead anibox" style="padding: 30px 0px 30px 0px"><span class="name">웨딩 갤러리</span></div>
 
@@ -378,6 +522,8 @@
                 }
             </script>
         </div>
+      -->
+
         <!--
         <div class="sectionMg layer" style="display: none;" id="weddingVideoSection">
             <div class="sectionHead" style="padding: 25px 0px 30px 0px">
