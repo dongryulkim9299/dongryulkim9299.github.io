@@ -4,7 +4,7 @@
 <body>
 
 <div style="border: 1px solid">
-  <input type="button" style="float:right; height:30; width:100;" value="NEW"><br>
+  <input type="button" style="float:right; height:30; width:100;" value="NEW"><br></input>
 <table>
   <tr>
     <td >Order Date</td>
@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td> Customer</td>
-    <td><input type="button" name="button" value="Select">
+    <td><input type="button" name="button" value="Select"></td>
     </tr>
     <tr>
       <td colspan="1">Route</td>
@@ -29,34 +29,64 @@
 </select></td>
 <tr>
   <td>Order Comment</td>
-  <td><input type="text" name="" value="write a comment">
+  <td><input type="text" name="" value="write a comment"></td>
     </tr>
     <tr>
       <td>Customer Alert</td>
       <td colspan="2"><input type="text" name="" value="Alert Message will appear here"></td>
-        <tr>
-          <td>Item Code</td>
-          <td>
-            <select name="item" id="item">
-              <option value="">Select</option>
-              <option value="SAL001">SAL001</option>
-              <option value="BEEF001">BEEF001</option>
-              <option value="UNI001">UNI001</option>
-              <option value="HAM001">HAM001</option>
-      </select>
-      </tr>
-      <tr>
-        <td>Item Code Description</td>
-        <td>
-          <select name="item" id="item">
-            <option value="">Select</option>
-            <option value="SALMON EXAMPLE">SALMON EXAMPLE</option>
-            <option value="BEEF EXAMPLE">BEEF EXAMPLE</option>
-            <option value="UNI EXAMPLE">UNI EXAMPLE</option>
-            <option value="HAM EXAMPLE">HA EXAMPLE</option>
-    </select>
     </tr>
-</table></div>
+    <tr>
+      <td><br><p style="font-size:20px;">Item Search</p></td>
+    </tr>
+    <tr>
+      <td>Item Code</td>
+      <td>
+        <select name="item" id="item">
+          <option value="">Select</option>
+          <option value="SAL001">SAL001</option>
+          <option value="BEEF001">BEEF001</option>
+          <option value="UNI001">UNI001</option>
+          <option value="HAM001">HAM001</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Item Code Description</td>
+      <td>
+        <select name="item" id="item">
+          <option value="">Select</option>
+          <option value="SALMON EXAMPLE">SALMON EXAMPLE</option>
+          <option value="BEEF EXAMPLE">BEEF EXAMPLE</option>
+          <option value="UNI EXAMPLE">UNI EXAMPLE</option>
+          <option value="HAM EXAMPLE">HA EXAMPLE</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><br><p style="font-size:20px;">Item Detail</p></td>
+    </tr>
+    <tr>
+      <th>Itemcode</th>
+      <th>Short Description</th>
+      <th>Remark/Comment</th>
+      <th>Order Quantity</th>
+      <th>UM</th>
+      <th>COMMENT</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="" value="code"></td>
+      <td><input type="text" name="" value="description"></td>
+      <td><input type="text" name="" value="remark/comment"></td>
+      <td><input type="text" name="" value="Quantity"></td>
+      <td><input type="Select" name="" value="UM"></td>
+      <td><input type="text" name="" value="comment"></td>
+    <tr>
+      <td><input type="button" name="button" value="ADD"><input type="button" name="button" value="DELETE"></td>
+
+
+</table>
+
+</div>
 
 </body>
 </html>
