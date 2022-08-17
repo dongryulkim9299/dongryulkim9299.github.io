@@ -66,19 +66,24 @@
       <td><br><p style="font-size:20px;">Item Detail</p></td>
     </tr>
     <tr>
-      <th>Itemcode</th>
-      <th>Short Description</th>
-      <th>Remark/Comment</th>
-      <th>Order Quantity</th>
-      <th>UM</th>
-      <th>COMMENT</th>
+      <td>Itemcode</td>
+      <td>Short Description</td>
+      <td>Remark/Comment</td>
+      <td>Order Quantity</td>
+      <td>UM</td>
+      <td>COMMENT</td>
     </tr>
     <tr>
       <td><input type="text" name="" value="code"></td>
       <td><input type="text" name="" value="description"></td>
       <td><input type="text" name="" value="remark/comment"></td>
       <td><input type="text" name="" value="Quantity"></td>
-      <td><input type="Select" name="" value="UM"></td>
+      <td><select name="um" id="um">
+        <option value="">Select</option>
+        <option value="PC">PC</option>
+        <option value="BX">BX</option>
+        <option value="LB">LB</option>
+      </select></td>
       <td><input type="text" name="" value="comment"></td>
     <tr>
       <td><input type="button" name="button" value="ADD"><input type="button" name="button" value="DELETE"></td>
