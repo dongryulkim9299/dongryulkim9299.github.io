@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.thborder {
+  border:1px solid;
+}
+</style>
 <body>
 
 <div style="border: 1px solid">
@@ -35,6 +41,8 @@
       <td>Customer Alert</td>
       <td colspan="2"><input type="text" name="" value="Alert Message will appear here"></td>
     </tr>
+    </table>
+    <table>
     <tr>
       <td><br><p style="font-size:20px;">Item Search</p></td>
     </tr>
@@ -62,34 +70,72 @@
         </select>
       </td>
     </tr>
+  </table>
+  <table>
     <tr>
       <td><br><p style="font-size:20px;">Item Detail</p></td>
     </tr>
     <tr>
-      <td>Itemcode</td>
-      <td>Short Description</td>
-      <td>Remark/Comment</td>
-      <td>Order Quantity</td>
-      <td>UM</td>
-      <td>COMMENT</td>
-    </tr>
-    <tr>
-      <td><input type="text" name="" value="code"></td>
-      <td><input type="text" name="" value="description"></td>
-      <td><input type="text" name="" value="remark/comment"></td>
-      <td><input type="text" name="" value="Quantity"></td>
-      <td><select name="um" id="um">
+      <td>Itemcode</td><td><input type="text" name="" value="code"></td></tr>
+      <tr>
+      <td>Short Description</td><td><input type="text" name="" value="description"></td></tr>
+      <tr>
+      <td>Remark/Comment</td><td><input type="text" name="" value="remark/comment"></td></tr>
+      <tr>
+      <td>Order Quantity</td><td><input type="text" name="" value="Quantity"></td></tr>
+      <tr>
+      <td>um</td><td><select name="um" id="um">
         <option value="">Select</option>
         <option value="PC">PC</option>
         <option value="BX">BX</option>
         <option value="LB">LB</option>
-      </select></td>
-      <td><input type="text" name="" value="comment"></td>
+      </select></td></tr>
+      <tr>
+      <td>comment</td><td><input type="text" name="" value="comment"></td></tr>
+    </tr>
     <tr>
       <td><input type="button" name="button" value="ADD"><input type="button" name="button" value="DELETE"></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td><br><p style="font-size:20px;">Item table</p></td>
+    </tr>
+    <tr>
+      <th class="thborder">itemcode</th>
+      <th class="thborder">Short Desc</th>
+      <th class="thborder">Remark/Comment</th>
+      <th class="thborder">Qty</th>
+      <th class="thborder">um</th>
+      <th class="thborder">Price</th>
+      <th class="thborder">Comment</th>
+    </tr>
+    <tr>
+      <td class="thborder">SAL001</td>
+      <td class="thborder">SALMON</td>
+      <td class="thborder">FILLET</td>
+      <td class="thborder">2</td>
+      <td class="thborder">PC</td>
+      <td class="thborder">14.99</td>
+      <td class="thborder">comment</td>
+    </tr>
+    <tr>
+      <td class="thborder">HAM001</td>
+      <td class="thborder">HAM</td>
+      <td class="thborder"></td>
+      <td class="thborder">5</td>
+      <td class="thborder">PC</td>
+      <td class="thborder">2.99</td>
+      <td class="thborder">comment</td>
+    </tr>
+  </table>
 
+  <table>
+    <tr>
+      <input type="button" style="float:right; height:30; width:100;" value="CANCEL"></input>
+    <input type="button" style="float:right; height:30; width:100;" value="SAVE"><br><br></input>
+  </tr>
 
-</table>
 
 </div>
 
