@@ -50,290 +50,661 @@
 </style>
 <body>
 
-  <div id="printArea" class="container-fluid">
-      <div class="row" style="margin-bottom:-27px;">
-          <div class="col-12">
-              <div class="card">
-                  <div class="card-body">
-                      <div class="table-responsive" style="overflow-x:hidden;">
-                          <div id="messageBox" style="color:red;display:none"><ul></ul></div>
-                          <form id="orderForm" name="orderForm" action="/Home/SaveOrder" method="post">
-                              <table class="table-bordered">
-                                  <colgroup>
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                  </colgroup>
-                                  <tbody>
-                                      <tr>
-                                          <!--<th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order No&nbsp;</th><!--fas fa-asterisk-->
-                                          <td colspan="2">
-                                              <div class="input-group">
-                                                  <input id="SalesOrderNo" name="SalesOrderNo" type="text" class="form-control" style="width:25%" hidden="true">&nbsp;
-                                                  <button id="LookupOrder" type="button" class="btn btn-rounded btn-primary" hidden="true"><i class="fas fa-search" ></i> LOOK UP</button>&nbsp;
-                                                  <button id="CopyOrder" type="button" class="btn btn-rounded btn-primary" hidden="true"><i class="fas fa-copy"></i> COPY FROM</button>&nbsp;
-                                                  <button id="RefreshOrder" type="button" class="btn btn-rounded waves-effect waves-light btn-sm btn-success"><i class="fas fa-check"></i> NEW</button>&nbsp;
-                                                  <input id="BatchNo" name="BatchNo" type="text" class="form-control" style="width:23%" placeholder="Batch No" hidden="true" readonly>
-                                              </div>
-                                          </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Date&nbsp;</th>
-                                            <td >
-                                                <div class="input-group">
-                                                    <input id="OrderDate" name="OrderDate" type="date" style="width: 94%; background-color: lightgray" class="form-control" value="" readonly>
-                                                </div>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Ship Date&nbsp;</th>
-                                            <td >
-                                                <div class="input-group">
-                                                    <input id="ShipDate" name="ShipDate" type="date" style="width:94%; color:blue" class="form-control" value="">
-                                                </div>
-                                            </td>
-                                          </tr>
-                                        <tr>
+  <div class="container-fluid">
+    <div class="row" style="margin-bottom:-27px;">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive" style="overflow-x:hidden;">
+                        <div id="divJSonString" style="color:red;"><ul></ul></div>
+                        <div id="resultDiv" style="color:red;"><ul></ul></div>
 
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Customer&nbsp;</th>
-                                          <!--<th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i><span id="Customer" style="cursor:pointer">&nbsp;<u>Customer&nbsp;</u></span></th>-->
-                                          <td>
-                                              <div class="input-group">
-                                                  <input id="CustomerNo" name="CustomerNo" type="search" class="form-control" style="width:19%" placeholder="Number" readonly>&nbsp;
-                                                  <button id="LookupCust" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
-                                                  <input id="CustomerName" name="CustomerName" type="text" class="form-control" style="width:43%" alt="this.val()" placeholder="Name" readonly>&nbsp;
-                                                  <input id="ContactCode" name="ContactCode" type="text" class="form-control" style="width:19%" hidden="true" readonly>
-                                                  <input id="ARDivisionNo" name="ARDivisionNo" type="hidden">
-                                                  <input id="TaxSchedule" name="TaxSchedule" type="hidden">
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <!--
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px" ></i>&nbsp;Order Status&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <div style="width:75%;">
-                                                      <select id="OrderStatus" name="OrderStatus" class="form-control" style="width:100%">
-                                                          <option value="" selected>Choose...</option>
-                                                          @foreach (var item in OrderStatus)
-                                                          {
-                                                              <option value="@item.value">@item.label</option>
-                                                          }
-                                                      </select>
-                                                      <input type="hidden" id="OriginalStatus" name="OriginalStatus" value="N" />
-                                                      <input type="hidden" id="NowStatus" name="NowStatus" value="N" />
-                                                  </div>
-                                                  <div style="width:20%;margin-left:5px;">
-                                                      <button id="btnReason" type="button" class="btn btn-rounded btn-primary" disabled><i class="fas fa-edit"></i></button>
-                                                  </div>
-                                              </div>
-                                          </td>
-                                        -->
-                                          <th class="text-right">Route&nbsp;&nbsp;&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <select id="Route" name="Route" class="custom-select bg-white" style="width:94%">
-                                                      <option value="" selected>ALL</option>
-                                                      @foreach (var item in Route)
-                                                      {
-                                                          <option value="@item.value">@item.label</option>
-                                                      }
-                                                  </select>
+                        <table class="table-bordered">
+                            <colgroup>
+                                <col style="width:15%" />
+                                <col style="width:85%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <table class="table-borderless center">
+                                            <tr>
+                                                <td>
+                                                    <div class="form-inline">
+                                                        <span class="font-weight-bold">ID</span>&nbsp;&nbsp;
+                                                        <select id="ddlID" class="custom-select bg-white" style="width:120px;">
+                                                            @foreach (var item in TunaIDList)
+                                                            {
+                                                                <option value="@item.value">@item.value</option>
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
 
-                                                  <input id="Route" name="Route" type="text" style="width:46%" class="form-control" hidden="true" readonly>
+                            <!-- Back 1 -->
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="text-align:center;">
 
-                                                  <input id="Driver" name="Driver" type="text" style="width:46%" class="form-control" hidden="true" readonly>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <th class="text-right">Order Comment&nbsp;</th>
-                                          <td >
-                                              <div class="input-group">
-                                                  <input id="OrderComment" name="OrderComment" type="text" class="form-control" style="width:98%" maxlength="200" placeholder="MAX 200 LETTER" />
-                                              </div>
-                                          </td>
-                                        </tr>
-                                        <tr>
+                                        <table class="table-borderless">
+                                            <colgroup>
+                                                <col style="width:3%" />
+                                                <col style="width:10%" />
+                                                <col style="width:9%" />
+                                                <col style="width:20%" />
+                                                <col style="width:8%" />
+                                                <col style="width:50%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <table class="table-borderless" style="width:800px;">
+                                                            <tr>
+                                                                <td style="width:50px;">&nbsp;</td>
+                                                                <td style="text-align:left;">
+                                                                    <label class="control-label font-weight-bold">
+                                                                        Loin Part :
+                                                                    </label>
+                                                                    <label class="font-weight-bold alert-info">&nbsp; Back 1&nbsp; </label>
+                                                                    <label class="control-label font-weight-bold text-danger" id="lblTitleBack1">
+                                                                    </label>
+                                                                </td>
+                                                              </tr>
+                                                              <tr>
+                                                                <!--Additional field to show same order DK 20220715-->
+                                                                <td class="text-right">
+                                                                    <span class="font-weight-bold">Same Order</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="input-group">
+                                                                        <input id="sameorder1" class="form-control" type="text" style="font-weight : bold" readonly/>
+                                                                    </div>
+                                                                </td>
+                                                                <!--END DK 20220715-->
+                                                            </tr>
+                                                        </table>
 
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Alert&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
+                                                        <div style="position:relative">
+                                                            <table class="table-borderless" style="width:800px;">
+                                                                <tr>
+                                                                    <td style="width:50px;">&nbsp;</td>
+                                                                    <td>
+                                                                        <div id="dvImage1"><img src='img/bluefin_back.jpg' width="auto" id="part_image_back1" /></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <div id="dvTable" style="position:absolute;top:20px;left:50px;"></div>
+                                                        </div>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">NO</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="ddlNO1" type="text" class="form-control" readonly>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Sales Rep</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <select id="salesRep1" class="custom-select bg-white" style="width:94%">
+                                                                @foreach (var item in SalesPerson)
+                                                                {
+                                                                    <option value="@item.value">@item.value</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Customer</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="CustomerNo1" name="CustomerNo" type="text" class="form-control" style="width:66px;" placeholder="Number" readonly>&nbsp;
+                                                            <button id="LookupCust1" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
+                                                            <input id="CustomerName1" name="CustomerName" type="text" class="form-control" style="width:50%" alt="this.val()" placeholder="Name" readonly>&nbsp;
+                                                            <input id="ARDivisionNo1" name="ARDivisionNo" type="hidden">
+                                                            <input id="hidWeight1" name="hidWeight1" type="hidden">
+                                                            <input id="hidSDate" name="hidSDate" type="hidden">
+                                                            <input id="hidEDate" name="hidEDate" type="hidden">
+                                                            <input id="hidDetailB1" name="hidDetailB1" type="hidden">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Weight</span>
+                                                    </td>
+                                                    <td>
+                                                        <input id="txtWeight1" class="form-control" type="text" readonly />
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Ship Date</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="txtSDate1" class="form-control" type="date" value="" />
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Note</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="txtNote1" class="form-control" type="text" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="card-body btn-shadow">
+                                                                        <table class="table-borderless" style="width:100%;">
+                                                                            <tr>
+                                                                                <td style="text-align:left; vertical-align: bottom;">
+                                                                                    <div>
+                                                                                        <input type="checkbox" id="allCk1"> <label for="allCk1"><b> Check All</b></label>
+                                                                                        <label id="lblSales1" class="control-label text-danger" style="display:none;"></label>
+                                                                                    </div><div id="chkList1" class="select_subject"></div>
+                                                                                </td>
+                                                                                <td style="text-align:right;width:350px;">
+                                                                                    <button id="btnSaveDetail1" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-save"></i> Save </button>
+                                                                                    <button id="btnReset1" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Reset</button>
+                                                                                    <button id="btnDelete1" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> Delete </button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
-                                                  <input id="Alert" name="Alert" type="text" class="form-control" style="width:95%; color:red; font-weight:bold" placeholder="Alert Message" readonly />
-                                              </div>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                              <table class="table-bordered">
-                                  <colgroup>
-                                      <col style="width:9%" />
-                                      <col style="width:21%" />
-                                      <col style="width:9%" />
-                                      <col style="width:28%" />
-                                      <col style="width:9%" />
-                                      <col style="width:24%" />
-                                  </colgroup>
-                                  <tbody hidden="true">
-                                      <tr>
-                                          <th class="text-right">Bill To/ ship To&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <input id="BillToName" name="BillToName" type="text" style="width:auto" class="form-control" readonly>
-                                              </div>
-                                          </td>
-                                          <th class="text-right">Address&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <input id="BillToAddress1" name="BillToAddress1" type="text" style="width:60%" class="form-control" readonly>&nbsp;
-                                                  <input id="BillToAddress2" name="BillToAddress2" type="text" style="width:30%" class="form-control" readonly>
-                                              </div>
-                                          </td>
-                                          <th class="text-right">City/state/Zip&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <input id="BillToCity" name="BillToCity" type="text" class="form-control" style="width:45%" readonly>&nbsp;
-                                                  <input id="BillToState" name="BillToState" type="text" class="form-control" style="width:24%" readonly>&nbsp;
-                                                  <input id="BillToZipCode" name="BillToZipCode" type="text" class="form-control" style="width:15%" readonly>
-                                                  <input id="BillToCountryCode" name="BillToCountryCode" type="hidden">
-                                              </div>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                                    </td>
+                                </tr>
+                            </tbody>
 
-      <!-- Item Table -->
-      <div class="row" style="margin-bottom:-27px;">
-          <div class="col-lg-12">
-              <div class="card">
-                  <div class="card-body btn-shadow">
-                      <table class="table-borderless" width="100%">
-                          <colgroup>
-                              <col style="width:9%" />
-                              <col style="width:32%" />
-                              <col style="width:9%" />
-                              <col style="width:50%" />
-                          </colgroup>
-                          <tbody>
-                              <tr hidden="true">
-                                  <th class="text-right">Template&nbsp;</th>
-                                  <td>
-                                      <div class="input-group">
-                                          <select id="TemplateNo" name="TemplateNo" style="width:30%" class="form-control bg-white">
-                                              <option value="" selected style="padding-top:5px;padding-bottom:5px;">Choose...</option>
-                                          </select>&nbsp;
-                                          <button id="TemplateApply" class="btn btn-rounded btn-success"><i class="fas fa-plus"></i> APPLY</button>&nbsp;
-                                          <!-- Add UpdateTemplate button so user can update specific template they choose-->
-                                          <button id="UpdateTemplate" type="submit" class="btn btn-rounded btn-success"><i class="fa fa-edit"></i>Update Template</button>
-                                      </div>
+                            <!-- Back 2 -->
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="text-align:center;">
 
-                                  </td>
-                                  <td class="text-right" colspan="2">
-                                      <button id="ItemInquiry" class="btn btn-rounded btn-success"><i class="fa fa-plus"></i> Item Inquiry</button>
-                                      <button id="HotItemInquiry" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Hot Item Inquiry</button>
-                                  </td>
+                                        <table class="table-borderless">
+                                            <colgroup>
+                                                <col style="width:3%" />
+                                                <col style="width:10%" />
+                                                <col style="width:9%" />
+                                                <col style="width:20%" />
+                                                <col style="width:8%" />
+                                                <col style="width:50%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <table class="table-borderless" style="width: 800px;">
+                                                            <tr>
+                                                                <td style="width:50px;">&nbsp;</td>
+                                                                <td style="text-align:left;">
+                                                                    <label class="control-label font-weight-bold">
+                                                                        Loin Part :
+                                                                    </label>
+                                                                    <label class="font-weight-bold alert-info">&nbsp;Back 2&nbsp;</label>
+                                                                    <label class="control-label font-weight-bold text-danger" id="lblTitleBack2">
+                                                                    </label>
+                                                                </td>
+                                                                <!--Additional field to show same order DK 20220715-->
+                                                                <td class="text-right">
+                                                                    <span class="font-weight-bold">Same Order</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="input-group">
+                                                                        <input id="sameorder2" class="form-control" type="text" style="font-weight : bold" readonly />
+                                                                    </div>
+                                                                </td>
+                                                                <!--END DK 20220715-->
+                                                            </tr>
+                                                        </table>
 
-                              </tr>
-                              <tr>
-                                  <th class="text-right">Item Search&nbsp;</th>
-                                  <td>
-                                      <div class="input-group">
-                                          <select id="ItemCode" class="form-control" style="width:20%" placeholder="Item Code"></select>&nbsp;
-                                          <select id="ItemDesc" class="form-control" style="width:70%" placeholder="Short Description"></select>
-                                      </div>
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
+                                                        <div style="position:relative">
+                                                            <table class="table-borderless" style="width: 800px;">
+                                                                <tr>
+                                                                    <td style="width:50px;">&nbsp;</td>
+                                                                    <td><div id="dvImage2"><img src='img/bluefin_back.jpg' width="auto" id="part_image_back2" /></div></td>
+                                                                </tr>
+                                                            </table>
+                                                            <div id="dvTableBack2" style="position:absolute;top:22px;left:50px;"></div>
+                                                        </div>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">NO</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="ddlNO2" type="text" class="form-control" readonly>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Sales Rep</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <select id="salesRep2" class="custom-select bg-white" style="width:94%">
+                                                                @foreach (var item in SalesPerson)
+                                                                {
+                                                                    <option value="@item.value">@item.value</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Customer</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="CustomerNo2" name="CustomerNo2" type="text" class="form-control" style="width: 66px;" placeholder="Number" readonly>&nbsp;
+                                                            <button id="LookupCust2" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
+                                                            <input id="CustomerName2" name="CustomerName2" type="text" class="form-control" style="width:50%" alt="this.val()" placeholder="Name" readonly>&nbsp;
+                                                            <input id="ARDivisionNo2" name="ARDivisionNo2" type="hidden">
+                                                            <input id="hidWeight2" name="hidWeight2" type="hidden">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Weight</span>
+                                                    </td>
+                                                    <td>
+                                                        <input id="txtWeight2" class="form-control" type="text" readonly />
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Ship Date</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group"><input id="txtSDate2" class="form-control" type="date" value="" /></div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Note</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="txtNote2" class="form-control" type="text" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="card-body btn-shadow">
+                                                                        <table class="table-borderless" style="width:100%;">
+                                                                            <tr>
+                                                                                <td style="text-align:left;vertical-align:bottom;">
+                                                                                    <div>
+                                                                                        <input type="checkbox" id="allCk2"> <label for="allCk2"><b> Check All</b></label>
+                                                                                        <label id="lblSales2" class="control-label text-danger" style="display:none;"></label>
+                                                                                    </div><div id="chkList2" class="select_subject2"></div>
+                                                                                </td>
+                                                                                <td style="text-align: right; width: 300px;">
+                                                                                    <button id="btnSaveDetail2" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-save"></i> Save </button>
+                                                                                    <button id="btnReset2" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Reset</button>
+                                                                                    <button id="btnDelete2" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> Delete </button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
 
-                      <div class="table-responsive">
-                          <div id="itemTable" class="table-bordered table-striped"></div>
-                          <table class="table-borderless" width="100%">
-                              <tbody>
-                                  <tr>
-                                      <td class="text-right">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
-                                          <button id="addRow" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-plus"></i> ADD</button>
-                                          <button id="itemReset" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> RESET</button>
-                                      </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
+                                    </td>
+                                </tr>
+                            </tbody>
 
-                  </div>
-              </div>
-          </div>
-      </div>
+                            <!-- Belly 3 -->
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="text-align:center;">
 
-      <!-- Order Table -->
-      <div class="row" style="margin-bottom:-20px;">
-          <div class="col-lg-12">
-              <div class="card">
-                  <div class="card-body btn-shadow">
-                      <div id="tabulator-controls" class="row" style="margin-bottom:1px">
-                          <div style="width:70%;margin-left:17px;margin-top:1px;">
-                              <button id="orderDelete" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> DELETE</button>
-                              <button id="orderReset" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> RESET</button>
-                          </div>
-                          <div style="width:57%;margin-right:5px;margin-top:9px" align="right" class="float-right">
-                          </div>
-                      </div>
-                      <div class="table-responsive">
-                          <div id="orderTable" class="table-bordered table-striped"></div>
-                      </div>
-                      <div class="row">
-                          <div class="col-lg-12">
-                              <div class="card">
-                                  <table class="table table-striped" style="margin-bottom:0px;">
-                                      <colgroup>
-                                          <col style="width:10%" /><!--Subtotal-->
-                                          <col style="width:67%" />
-                                          <col style="width:9%" /><!--Order Total-->
-                                          <col style="width:14%" />
-                                      </colgroup>
-                                      <tbody>
-                                          <tr>
+                                        <table class="table-borderless">
+                                            <colgroup>
+                                                <col style="width:3%" />
+                                                <col style="width:10%" />
+                                                <col style="width:9%" />
+                                                <col style="width:20%" />
+                                                <col style="width:8%" />
+                                                <col style="width:50%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <table class="table-borderless" style="width: 800px;">
+                                                            <tr>
+                                                                <td style="width:50px;">&nbsp;</td>
+                                                                <td style="text-align:left;">
+                                                                    <label class="control-label font-weight-bold">
+                                                                        Loin Part :
+                                                                    </label>
+                                                                    <label class="font-weight-bold alert-info"> &nbsp;Belly 3&nbsp;</label>
+                                                                    <label class="control-label font-weight-bold text-danger" id="lblTitleBelly3">
+                                                                    </label>
+                                                                </td>
+                                                                <!--Additional field to show same order DK 20220715-->
+                                                                <td class="text-right">
+                                                                    <span class="font-weight-bold">Same Order</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="input-group">
+                                                                        <input id="sameorder3" class="form-control" type="text" style="font-weight : bold" readonly />
+                                                                    </div>
+                                                                </td>
+                                                                <!--END DK 20220715-->
+                                                            </tr>
+                                                        </table>
 
-                                              <th style="color:blue">Total Order Line&nbsp;:</th>
-                                              <td><div id="OrderTotal" class="font-weight-bold" style="color:blue"></div></td>
-                                              <th style="color:blue"></th>
-                                              <td></td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-lg-12">
-              <div id="tabulator-controls" class="row ui-icon-cir" style="margin-bottom:15px">
-                  <div style="width:100%;margin-right:14px" align="right" class="float-right">
-                      <button id="print" class="btn btn-rounded btn-primary"><i class="fa fa-print"></i>Preview</button>
-                      <button id="cancelOrder" class="btn btn-rounded btn-primary"><i class="fa fa-undo-alt"></i> Cancel Order</button>
-                      <button id="saveOrder" type="submit" class="btn btn-rounded btn-success"><i class="fa fa-save"></i> Save Order</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+                                                        <div style="position:relative">
+                                                            <table class="table-borderless" style="width: 800px;">
+                                                                <tr>
+                                                                    <td style="width:50px;">&nbsp;</td>
+                                                                    <td><div id="dvImage3"><img src='img/bluefin_belly.jpg' width="auto" id='part_image_belly3'></div></td>
+                                                                </tr>
+                                                            </table>
+                                                            <div id="dvTableBelly3" style="position:absolute;top:30px;left:50px;"></div>
+                                                        </div>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">NO</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="ddlNO3" type="text" class="form-control" readonly>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Sales Rep</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <select id="salesRep3" class="custom-select bg-white" style="width:94%">
+                                                                @foreach (var item in SalesPerson)
+                                                                {
+                                                                    <option value="@item.value">@item.value</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Customer</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="CustomerNo3" name="CustomerNo" type="text" class="form-control" style="width: 66px;" placeholder="Number" readonly>&nbsp;
+                                                            <button id="LookupCust3" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
+                                                            <input id="CustomerName3" name="CustomerName" type="text" class="form-control" style="width:50%" alt="this.val()" placeholder="Name" readonly>&nbsp;
+                                                            <input id="ARDivisionNo3" name="ARDivisionNo" type="hidden">
+                                                            <input id="hidWeight3" name="hidWeight3" type="hidden">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Weight</span>
+                                                    </td>
+                                                    <td>
+                                                        <input id="txtWeight3" class="form-control" type="text" readonly />
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Ship Date</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group"><input id="txtSDate3" class="form-control" type="date" value="" /></div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Note</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="txtNote3" class="form-control" type="text" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="card-body btn-shadow">
+                                                                        <table class="table-borderless" style="width:100%;">
+                                                                            <tr>
+                                                                                <td style="text-align:left; vertical-align:bottom;">
+                                                                                    <div>
+                                                                                        <input type="checkbox" id="allCk3"> <label for="allCk3"><b> Check All</b></label>
+                                                                                        <label id="lblSales3" class="control-label text-danger" style="display:none;"></label>
+                                                                                    </div><div id="chkList3" class="select_subject3"></div>
+                                                                                </td>
+                                                                                <td style="text-align: right; width: 300px;">
+                                                                                    <button id="btnSaveDetail3" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-save"></i> Save </button>
+                                                                                    <button id="btnReset3" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Reset</button>
+                                                                                    <button id="btnDelete3" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> Delete </button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- Belly 4 -->
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="text-align:center;">
+
+                                        <table class="table-borderless" style="text-align:center;">
+                                            <colgroup>
+                                                <col style="width:3%" />
+                                                <col style="width:10%" />
+                                                <col style="width:9%" />
+                                                <col style="width:20%" />
+                                                <col style="width:8%" />
+                                                <col style="width:50%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <table class="table-borderless" style="width: 800px;">
+                                                            <tr>
+                                                                <td style="width:50px;">&nbsp;</td>
+                                                                <td style="text-align:left;">
+                                                                    <label class="control-label font-weight-bold">
+                                                                        Loin Part :
+                                                                    </label>
+                                                                    <label class="font-weight-bold alert-info"> &nbsp;Belly 4&nbsp;</label>
+                                                                    <label class="control-label font-weight-bold text-danger" id="lblTitleBelly4">
+                                                                    </label>
+                                                                </td>
+                                                                <!--Additional field to show same order DK 20220715-->
+                                                                <td class="text-right">
+                                                                    <span class="font-weight-bold">Same Order</span>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="input-group">
+                                                                        <input id="sameorder4" class="form-control" type="text" style="font-weight : bold" readonly />
+                                                                    </div>
+                                                                </td>
+                                                                <!--END DK 20220715-->
+                                                            </tr>
+                                                        </table>
+
+                                                        <div style="position:relative">
+                                                            <table class="table-borderless" style="width: 800px;">
+                                                                <tr>
+                                                                    <td style="width:50px;">&nbsp;</td>
+                                                                    <td><div id="dvImage4"><img src='img/bluefin_belly.jpg' width="auto" id='part_image_belly4'></div></td>
+                                                                </tr>
+                                                            </table>
+                                                            <div id="dvTableBelly4" style="position:absolute;top:30px;left:50px;"></div>
+                                                        </div>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">NO</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="ddlNO4" type="text" class="form-control" readonly>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Sales Rep</span>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <select id="salesRep4" class="custom-select bg-white" style="width:94%">
+                                                                @foreach (var item in SalesPerson)
+                                                                {
+                                                                    <option value="@item.value">@item.value</option>
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Customer</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="CustomerNo4" name="CustomerNo" type="text" class="form-control" style="width: 66px;" placeholder="Number" readonly>&nbsp;
+                                                            <button id="LookupCust4" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
+                                                            <input id="CustomerName4" name="CustomerName" type="text" class="form-control" style="width:50%" alt="this.val()" placeholder="Name" readonly>&nbsp;
+                                                            <input id="ARDivisionNo4" name="ARDivisionNo" type="hidden">
+                                                            <input id="hidWeight4" name="hidWeight4" type="hidden">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Weight</span>
+                                                    </td>
+                                                    <td>
+                                                        <input id="txtWeight4" class="form-control" type="text" readonly />
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Ship Date</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group"><input id="txtSDate4" class="form-control" type="date" value="" /></div>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span class="font-weight-bold">Note</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input id="txtNote4" class="form-control" type="text" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="card-body btn-shadow">
+                                                                        <table class="table-borderless" style="width:100%;">
+                                                                            <tr>
+                                                                                <td style="text-align:left;">
+                                                                                    <div>
+                                                                                        <input type="checkbox" id="allCk4"> <label for="allCk4"><b> Check All</b></label>
+                                                                                        <label id="lblSales4" class="control-label text-danger" style="display:none;"></label>
+                                                                                    </div><div id="chkList4" class="select_subject4"></div>
+                                                                                </td>
+                                                                                <td style="text-align:right;width:300px;">
+                                                                                    <button id="btnSaveDetail4" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-save"></i> Save </button>
+                                                                                    <button id="btnReset4" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Reset</button>
+                                                                                    <button id="btnDelete4" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> Delete </button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 
 </body>
 </html>
