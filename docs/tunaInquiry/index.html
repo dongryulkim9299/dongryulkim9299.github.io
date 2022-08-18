@@ -50,161 +50,288 @@
 </style>
 <body>
 
-  <div id="printArea" class="container-fluid">
+  <div class="container-fluid">
       <div class="row" style="margin-bottom:-27px;">
           <div class="col-12">
               <div class="card">
                   <div class="card-body">
                       <div class="table-responsive" style="overflow-x:hidden;">
                           <div id="messageBox" style="color:red;display:none"><ul></ul></div>
-                          <form id="orderForm" name="orderForm" action="/Home/SaveOrder" method="post">
+                          <form id="orderForm" name="orderForm" action="/Home/SaveTuna" method="post">
                               <table class="table-bordered">
                                   <colgroup>
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
-                                      <col style="width:9%" />
-                                      <col style="width:16%" />
+                                      <col style="width:8%" />
+                                      <col style="width:44%" />
+                                      <col style="width:8%" />
+                                      <col style="width:30%" />
                                   </colgroup>
                                   <tbody>
                                       <tr>
-                                          <!--<th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order No&nbsp;</th><!--fas fa-asterisk-->
-                                          <td colspan="2">
-                                              <div class="input-group">
-                                                  <input id="SalesOrderNo" name="SalesOrderNo" type="text" class="form-control" style="width:25%" hidden="true">&nbsp;
-                                                  <button id="LookupOrder" type="button" class="btn btn-rounded btn-primary" hidden="true"><i class="fas fa-search" ></i> LOOK UP</button>&nbsp;
-                                                  <button id="CopyOrder" type="button" class="btn btn-rounded btn-primary" hidden="true"><i class="fas fa-copy"></i> COPY FROM</button>&nbsp;
-                                                  <button id="RefreshOrder" type="button" class="btn btn-rounded waves-effect waves-light btn-sm btn-success"><i class="fas fa-check"></i> NEW</button>&nbsp;
-                                                  <input id="BatchNo" name="BatchNo" type="text" class="form-control" style="width:23%" placeholder="Batch No" hidden="true" readonly>
+                                          <th class="text-right">Kind&nbsp;</th>
+                                          <td>
+                                              &nbsp;
+                                              <div class="form-check-inline">
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="KIND" id="big_eye" value="BigEye" required>
+                                                      <label class="custom-control-label" for="big_eye">BigEye</label>
+                                                  </div>
+                                                  <div class="form-check-inline">
+                                                      <div class="custom-control custom-radio form-check-inline">
+                                                          <input type="radio" class="custom-control-input" name="KIND" id="yellow_fin" value="YellowFin" required>
+                                                          <label class="custom-control-label" for="yellow_fin">YellowFin</label>
+                                                      </div>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="KIND" id="local_tuna" value="LocalTuna" required>
+                                                      <label class="custom-control-label" for="local_tuna">LocalTuna</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="KIND" id="no2" value="NO2" required>
+                                                      <label class="custom-control-label" for="no2">NO2</label>
+                                                  </div>
                                               </div>
+                                              <div class="form-check-inline">
+
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="KIND" id="mexico_bf" value="MexicoBF" required>
+                                                      <label class="custom-control-label font-italic" for="mexico_bf">MexicoBF</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="KIND" id="spain_bf" value="SpainBF" required>
+                                                      <label class="custom-control-label" for="spain_bf">SpainBF</label>
+                                                  </div>
+                                              </div>
+
+                                              <div class="form-check-inline">
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      &nbsp;<input type="radio" class="custom-control-input" name="KIND" id="other" value="Other" required> <!-- add blank space to sort columns 07192022 DK-->
+                                                      <label class="custom-control-label" for="other">Other</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline" style="display:inline-flex; padding-left: 0rem;">
+                                                      &#160;<input type="text" id="other_text" class="form-control form-control-sm" style="width:100px; " disabled>
+                                                  </div>
+                                              </div>
+
                                           </td>
                                         </tr>
                                         <tr>
-                                            <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Date&nbsp;</th>
-                                            <td >
-                                                <div class="input-group">
-                                                    <input id="OrderDate" name="OrderDate" type="date" style="width: 94%; background-color: lightgray" class="form-control" value="" readonly>
-                                                </div>
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Ship Date&nbsp;</th>
-                                            <td >
-                                                <div class="input-group">
-                                                    <input id="ShipDate" name="ShipDate" type="date" style="width:94%; color:blue" class="form-control" value="">
-                                                </div>
-                                            </td>
-                                          </tr>
-                                        <tr>
+                                          <th class="text-right"><label id="mbf_label" class="font-italic text-secondary" style="font-weight: bold;">Mexico BF</label>&nbsp;</th>
+                                          <td>
 
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Customer&nbsp;</th>
-                                          <!--<th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i><span id="Customer" style="cursor:pointer">&nbsp;<u>Customer&nbsp;</u></span></th>-->
-                                          <td>
                                               <div class="input-group">
-                                                  <input id="CustomerNo" name="CustomerNo" type="search" class="form-control" style="width:19%" placeholder="Number" readonly>&nbsp;
-                                                  <button id="LookupCust" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
-                                                  <input id="CustomerName" name="CustomerName" type="text" class="form-control" style="width:43%" alt="this.val()" placeholder="Name" readonly>&nbsp;
-                                                  <input id="ContactCode" name="ContactCode" type="text" class="form-control" style="width:19%" hidden="true" readonly>
-                                                  <input id="ARDivisionNo" name="ARDivisionNo" type="hidden">
-                                                  <input id="TaxSchedule" name="TaxSchedule" type="hidden">
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <!--
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px" ></i>&nbsp;Order Status&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <div style="width:75%;">
-                                                      <select id="OrderStatus" name="OrderStatus" class="form-control" style="width:100%">
-                                                          <option value="" selected>Choose...</option>
-                                                          @foreach (var item in OrderStatus)
-                                                          {
-                                                              <option value="@item.value">@item.label</option>
-                                                          }
-                                                      </select>
-                                                      <input type="hidden" id="OriginalStatus" name="OriginalStatus" value="N" />
-                                                      <input type="hidden" id="NowStatus" name="NowStatus" value="N" />
-                                                  </div>
-                                                  <div style="width:20%;margin-left:5px;">
-                                                      <button id="btnReason" type="button" class="btn btn-rounded btn-primary" disabled><i class="fas fa-edit"></i></button>
+                                                  &nbsp;
+                                                  <div class="form-check-inline">
+                                                      <div class="custom-control custom-radio form-check-inline">
+                                                          <input type="radio" class="custom-control-input" name="MBF" id="mbf_big" value="BIG" required disabled>
+                                                          <label class="custom-control-label" for="mbf_big">Big</label>
+                                                      </div>
+                                                      <div class="form-check-inline">
+                                                          <div class="custom-control custom-radio form-check-inline">
+                                                              <input type="radio" class="custom-control-input" name="MBF" id="mbf_mid" value="MID" required disabled>
+                                                              <label class="custom-control-label" for="mbf_mid">Mid</label>
+                                                          </div>
+                                                      </div>
+                                                      <div class="custom-control custom-radio form-check-inline">
+                                                          <input type="radio" class="custom-control-input" name="MBF" id="mbf_small" value="SMALL" required disabled>
+                                                          <label class="custom-control-label" for="mbf_small">Small</label>
+                                                      </div>
                                                   </div>
                                               </div>
                                           </td>
-                                        -->
-                                          <th class="text-right">Route&nbsp;&nbsp;&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <select id="Route" name="Route" class="custom-select bg-white" style="width:94%">
-                                                      <option value="" selected>ALL</option>
-                                                      @foreach (var item in Route)
-                                                      {
-                                                          <option value="@item.value">@item.label</option>
-                                                      }
-                                                  </select>
 
-                                                  <input id="Route" name="Route" type="text" style="width:46%" class="form-control" hidden="true" readonly>
-
-                                                  <input id="Driver" name="Driver" type="text" style="width:46%" class="form-control" hidden="true" readonly>
-                                              </div>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <th class="text-right">Order Comment&nbsp;</th>
-                                          <td >
-                                              <div class="input-group">
-                                                  <input id="OrderComment" name="OrderComment" type="text" class="form-control" style="width:98%" maxlength="200" placeholder="MAX 200 LETTER" />
-                                              </div>
-                                          </td>
-                                        </tr>
-                                        <tr>
-
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Alert&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-
-                                                  <input id="Alert" name="Alert" type="text" class="form-control" style="width:95%; color:red; font-weight:bold" placeholder="Alert Message" readonly />
-                                              </div>
-                                          </td>
                                       </tr>
                                   </tbody>
-                              </table>
-                              <table class="table-bordered">
-                                  <colgroup>
-                                      <col style="width:9%" />
-                                      <col style="width:21%" />
-                                      <col style="width:9%" />
-                                      <col style="width:28%" />
-                                      <col style="width:9%" />
-                                      <col style="width:24%" />
-                                  </colgroup>
-                                  <tbody hidden="true">
+
+                                  <tbody>
                                       <tr>
-                                          <th class="text-right">Bill To/ ship To&nbsp;</th>
+                                          <th class="text-right">Size&nbsp;</th>
                                           <td>
-                                              <div class="input-group">
-                                                  <input id="BillToName" name="BillToName" type="text" style="width:auto" class="form-control" readonly>
+                                              &nbsp;
+                                              <div class="form-check-inline">
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="SIZE" id="whole" value="1" required>
+                                                      <label class="custom-control-label" for="whole">Whole (1)</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="SIZE" id="3quarter" value="0.75" required>
+                                                      <label class="custom-control-label" for="3quarter">3 Quarter (&#190;)</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="SIZE" id="half" value="0.5" required>
+                                                      <label class="custom-control-label" for="half">Half (&#189;)</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="SIZE" id="quarter" value="0.25" required>
+                                                      <label class="custom-control-label" for="quarter">Quarter (&#188;)</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="SIZE" id="loin" value="0.1" required>
+                                                      <label class="custom-control-label" for="loin">Loin</label>
+                                                  </div>
+                                              </div>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-right"><label id="part_label" class="text-secondary" style="font-weight: bold;">Part</label>&nbsp;</th>
+                                          <td>
+                                              <div class="form-check-inline">
+                                                  &nbsp;
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="PART" id="back" value="BACK" required disabled>
+                                                      <label class="custom-control-label" for="back">Back</label>
+                                                  </div>
+                                                  <div class="custom-control custom-radio form-check-inline">
+                                                      <input type="radio" class="custom-control-input" name="PART" id="belly" value="BELLY" required disabled>
+                                                      <label class="custom-control-label" for="belly">Belly</label>
+                                                  </div>
                                               </div>
                                           </td>
-                                          <th class="text-right">Address&nbsp;</th>
+
+                                      </tr>
+                                  </tbody>
+
+
+                                  <tbody>
+                                      <tr>
+                                          <th class="text-right">Loin Part&nbsp;</th>
                                           <td>
+                                              <div id="loin_part_group" class="form-check-inline">
+                                                  <table>
+                                                      <tr>
+                                                          <td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="loin_front" value="loin_front" disabled>
+                                                                  <label class="custom-control-label" for="loin_front">front</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="loin_middle" value="loin_middle" disabled>
+                                                                  <label class="custom-control-label" for="loin_middle">middle</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="loin_m_tail" value="loin_m_tail" disabled>
+                                                                  <label class="custom-control-label" for="loin_m_tail">middle tail</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="loin_tail" value="loin_tail" disabled>
+                                                                  <label class="custom-control-label" for="loin_tail">tail</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+                                                      <tr>
+                                                          <td colspan="6">
+                                                              <img id="tuna_img" src="img/tuna.png" width="90%" style="filter: grayscale(100%);">
+                                                          </td>
+                                                      </tr>
+                                                  </table>
+                                              </div>
+
+
+                                              <div id="loin_part_sbf_group" class="form-check-inline" style="display: none">
+                                                  <table>
+                                                      <tr>
+                                                          <td>&#160;</td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_51" value="sbf_51" disabled>
+                                                                  <label class="custom-control-label" for="sbf_51">51</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_52" value="sbf_52" disabled>
+                                                                  <label class="custom-control-label" for="sbf_52">52</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_53" value="sbf_53" disabled>
+                                                                  <label class="custom-control-label" for="sbf_53">53</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_54" value="sbf_54" disabled>
+                                                                  <label class="custom-control-label" for="sbf_54">54</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_55" value="sbf_55" disabled>
+                                                                  <label class="custom-control-label" for="sbf_55">55</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_56" value="sbf_56" disabled>
+                                                                  <label class="custom-control-label" for="sbf_56">56</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_57" value="sbf_57" disabled>
+                                                                  <label class="custom-control-label" for="sbf_57">57</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_58" value="sbf_58" disabled>
+                                                                  <label class="custom-control-label" for="sbf_58">58</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="custom-control custom-checkbox form-check-inline">
+                                                                  <input type="checkbox" class="custom-control-input" id="sbf_59" value="sbf_59" disabled>
+                                                                  <label class="custom-control-label" for="sbf_59">59</label>
+                                                              </div>
+                                                          </td>
+                                                          <td>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td>
+                                                      <tr>
+                                                          <td colspan="10">
+                                                              <img id="sbf_img" src="img/tuna_SpainBF_inventory.png" width="100%" style="filter: grayscale(100%);">
+                                                          </td>
+                                                      </tr>
+                                                  </table>
+                                              </div>
+
+                                          </td>
+
+                                      </tr>
+                                  </tbody>
+
+
+                                  <tbody>
+                                      <tr>
+                                          <th class="text-right">Weight&nbsp;</th>
+                                          <td>
+
                                               <div class="input-group">
-                                                  <input id="BillToAddress1" name="BillToAddress1" type="text" style="width:60%" class="form-control" readonly>&nbsp;
-                                                  <input id="BillToAddress2" name="BillToAddress2" type="text" style="width:30%" class="form-control" readonly>
+                                                  &nbsp;
+                                                  <input type="text" class="input-group-text" id="loin_weight" placeholder="Please enter weight in lbs" name="loin_weight">
+                                                  <span class="input-group-text" id="loin_weight_unit">lb</span>
+                                                  <span class="input-group-text">(MexicoBF=kg / Loin=lb)</span>
                                               </div>
                                           </td>
-                                          <th class="text-right">City/state/Zip&nbsp;</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="text-right">Date&nbsp;</th>
                                           <td>
+
                                               <div class="input-group">
-                                                  <input id="BillToCity" name="BillToCity" type="text" class="form-control" style="width:45%" readonly>&nbsp;
-                                                  <input id="BillToState" name="BillToState" type="text" class="form-control" style="width:24%" readonly>&nbsp;
-                                                  <input id="BillToZipCode" name="BillToZipCode" type="text" class="form-control" style="width:15%" readonly>
-                                                  <input id="BillToCountryCode" name="BillToCountryCode" type="hidden">
+                                                  &nbsp;
+                                                  <input id="po_date" name="po_date" type="date" style="width:94%; color:blue" class="form-control" value="">
+                                                  <input id="po_date" class="form-control" type="date" value="" />
                                               </div>
+
                                           </td>
+
                                       </tr>
                                   </tbody>
                               </table>
@@ -215,125 +342,21 @@
           </div>
       </div>
 
-      <!-- Item Table -->
-      <div class="row" style="margin-bottom:-27px;">
-          <div class="col-lg-12">
-              <div class="card">
-                  <div class="card-body btn-shadow">
-                      <table class="table-borderless" width="100%">
-                          <colgroup>
-                              <col style="width:9%" />
-                              <col style="width:32%" />
-                              <col style="width:9%" />
-                              <col style="width:50%" />
-                          </colgroup>
-                          <tbody>
-                              <tr hidden="true">
-                                  <th class="text-right">Template&nbsp;</th>
-                                  <td>
-                                      <div class="input-group">
-                                          <select id="TemplateNo" name="TemplateNo" style="width:30%" class="form-control bg-white">
-                                              <option value="" selected style="padding-top:5px;padding-bottom:5px;">Choose...</option>
-                                          </select>&nbsp;
-                                          <button id="TemplateApply" class="btn btn-rounded btn-success"><i class="fas fa-plus"></i> APPLY</button>&nbsp;
-                                          <!-- Add UpdateTemplate button so user can update specific template they choose-->
-                                          <button id="UpdateTemplate" type="submit" class="btn btn-rounded btn-success"><i class="fa fa-edit"></i>Update Template</button>
-                                      </div>
 
-                                  </td>
-                                  <td class="text-right" colspan="2">
-                                      <button id="ItemInquiry" class="btn btn-rounded btn-success"><i class="fa fa-plus"></i> Item Inquiry</button>
-                                      <button id="HotItemInquiry" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Hot Item Inquiry</button>
-                                  </td>
-
-                              </tr>
-                              <tr>
-                                  <th class="text-right">Item Search&nbsp;</th>
-                                  <td>
-                                      <div class="input-group">
-                                          <select id="ItemCode" class="form-control" style="width:20%" placeholder="Item Code"></select>&nbsp;
-                                          <select id="ItemDesc" class="form-control" style="width:70%" placeholder="Short Description"></select>
-                                      </div>
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
-
-                      <div class="table-responsive">
-                          <div id="itemTable" class="table-bordered table-striped"></div>
-                          <table class="table-borderless" width="100%">
-                              <tbody>
-                                  <tr>
-                                      <td class="text-right">
-
-                                          <button id="addRow" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-plus"></i> ADD</button>
-                                          <button id="itemReset" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> RESET</button>
-                                      </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-
-                  </div>
-              </div>
-          </div>
-      </div>
 
       <!-- Order Table -->
-      <div class="row" style="margin-bottom:-20px;">
-          <div class="col-lg-12">
-              <div class="card">
-                  <div class="card-body btn-shadow">
-                      <div id="tabulator-controls" class="row" style="margin-bottom:1px">
-                          <div style="width:70%;margin-left:17px;margin-top:1px;">
-                              <button id="orderDelete" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> DELETE</button>
-                              <button id="orderReset" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> RESET</button>
-                          </div>
-                          <div style="width:57%;margin-right:5px;margin-top:9px" align="right" class="float-right">
-                          </div>
-                      </div>
-                      <div class="table-responsive">
-                          <div id="orderTable" class="table-bordered table-striped"></div>
-                      </div>
-                      <div class="row">
-                          <div class="col-lg-12">
-                              <div class="card">
-                                  <table class="table table-striped" style="margin-bottom:0px;">
-                                      <colgroup>
-                                          <col style="width:10%" /><!--Subtotal-->
-                                          <col style="width:67%" />
-                                          <col style="width:9%" /><!--Order Total-->
-                                          <col style="width:14%" />
-                                      </colgroup>
-                                      <tbody>
-                                          <tr>
 
-                                              <th style="color:blue">Total Order Line&nbsp;:</th>
-                                              <td><div id="OrderTotal" class="font-weight-bold" style="color:blue"></div></td>
-                                              <th style="color:blue"></th>
-                                              <td></td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
       <div class="row">
           <div class="col-lg-12">
               <div id="tabulator-controls" class="row ui-icon-cir" style="margin-bottom:15px">
                   <div style="width:100%;margin-right:14px" align="right" class="float-right">
-                      <button id="print" class="btn btn-rounded btn-primary"><i class="fa fa-print"></i>Preview</button>
-                      <button id="cancelOrder" class="btn btn-rounded btn-primary"><i class="fa fa-undo-alt"></i> Cancel Order</button>
-                      <button id="saveOrder" type="submit" class="btn btn-rounded btn-success"><i class="fa fa-save"></i> Save Order</button>
+
+                      <button id="deleteButton" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i>&nbsp;Delete</button>&nbsp;
+                      <button id="saveButton" class="btn btn-rounded btn-success"><i class="fa fa-save"></i>&nbsp;Save</button>&nbsp;
                   </div>
               </div>
           </div>
       </div>
   </div>
-
 </body>
 </html>
