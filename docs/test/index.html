@@ -71,44 +71,51 @@
                                   </colgroup>
                                   <tbody>
                                       <tr>
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order No&nbsp;</th><!--fas fa-asterisk-->
-                                          <td colspan="3">
+                                          <!--<th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order No&nbsp;</th><!--fas fa-asterisk-->
+                                          <td colspan="2">
                                               <div class="input-group">
-                                                  <input id="SalesOrderNo" name="SalesOrderNo" type="text" class="form-control" style="width:25%">&nbsp;
-                                                  <button id="LookupOrder" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i> LOOK UP</button>&nbsp;
-                                                  <button id="CopyOrder" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-copy"></i> COPY FROM</button>&nbsp;
+                                                  <input id="SalesOrderNo" name="SalesOrderNo" type="text" class="form-control" style="width:25%" hidden="true">&nbsp;
+                                                  <button id="LookupOrder" type="button" class="btn btn-rounded btn-primary" hidden="true"><i class="fas fa-search" ></i> LOOK UP</button>&nbsp;
+                                                  <button id="CopyOrder" type="button" class="btn btn-rounded btn-primary" hidden="true"><i class="fas fa-copy"></i> COPY FROM</button>&nbsp;
                                                   <button id="RefreshOrder" type="button" class="btn btn-rounded waves-effect waves-light btn-sm btn-success"><i class="fas fa-check"></i> NEW</button>&nbsp;
-                                                  <input id="BatchNo" name="BatchNo" type="text" class="form-control" style="width:23%" placeholder="Batch No" readonly>
+                                                  <input id="BatchNo" name="BatchNo" type="text" class="form-control" style="width:23%" placeholder="Batch No" hidden="true" readonly>
                                               </div>
                                           </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Date&nbsp;</th>
+                                            <td >
+                                                <div class="input-group">
+                                                    <input id="OrderDate" name="OrderDate" type="date" style="width: 94%; background-color: lightgray" class="form-control" value="" readonly>
+                                                </div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Ship Date&nbsp;</th>
+                                            <td >
+                                                <div class="input-group">
+                                                    <input id="ShipDate" name="ShipDate" type="date" style="width:94%; color:blue" class="form-control" value="">
+                                                </div>
+                                            </td>
+                                          </tr>
+                                        <tr>
+
                                           <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Customer&nbsp;</th>
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i><span id="Customer" style="cursor:pointer">&nbsp;<u>Customer&nbsp;</u></span></th>
-                                          <td colspan="3">
+                                          <!--<th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i><span id="Customer" style="cursor:pointer">&nbsp;<u>Customer&nbsp;</u></span></th>-->
+                                          <td>
                                               <div class="input-group">
                                                   <input id="CustomerNo" name="CustomerNo" type="search" class="form-control" style="width:19%" placeholder="Number" readonly>&nbsp;
                                                   <button id="LookupCust" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
                                                   <input id="CustomerName" name="CustomerName" type="text" class="form-control" style="width:43%" alt="this.val()" placeholder="Name" readonly>&nbsp;
-
-                                                  <input id="ContactCode" name="ContactCode" type="text" class="form-control" style="width:19%" readonly>
+                                                  <input id="ContactCode" name="ContactCode" type="text" class="form-control" style="width:19%" hidden="true" readonly>
                                                   <input id="ARDivisionNo" name="ARDivisionNo" type="hidden">
                                                   <input id="TaxSchedule" name="TaxSchedule" type="hidden">
                                               </div>
                                           </td>
                                       </tr>
                                       <tr>
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Entry Date&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <input id="OrderDate" name="OrderDate" type="date" style="width: 94%; background-color: lightgray" class="form-control" value="" readonly>
-                                              </div>
-                                          </td>
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Ship Date&nbsp;</th>
-                                          <td>
-                                              <div class="input-group">
-                                                  <input id="ShipDate" name="ShipDate" type="date" style="width:94%; color:blue" class="form-control" value="">
-                                              </div>
-                                          </td>
-                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Status&nbsp;</th>
+                                        <!--
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px" ></i>&nbsp;Order Status&nbsp;</th>
                                           <td>
                                               <div class="input-group">
                                                   <div style="width:75%;">
@@ -127,6 +134,7 @@
                                                   </div>
                                               </div>
                                           </td>
+                                        -->
                                           <th class="text-right">Route&nbsp;&nbsp;&nbsp;</th>
                                           <td>
                                               <div class="input-group">
@@ -138,22 +146,24 @@
                                                       }
                                                   </select>
 
-                                                  <input id="Route" name="Route" type="text" style="width:46%" class="form-control" readonly>
+                                                  <input id="Route" name="Route" type="text" style="width:46%" class="form-control" hidden="true" readonly>
 
-                                                  <input id="Driver" name="Driver" type="text" style="width:46%" class="form-control" readonly>
+                                                  <input id="Driver" name="Driver" type="text" style="width:46%" class="form-control" hidden="true" readonly>
                                               </div>
                                           </td>
                                       </tr>
                                       <tr>
                                           <th class="text-right">Order Comment&nbsp;</th>
-                                          <td colspan="3">
+                                          <td >
                                               <div class="input-group">
                                                   <input id="OrderComment" name="OrderComment" type="text" class="form-control" style="width:98%" maxlength="200" placeholder="MAX 200 LETTER" />
                                               </div>
                                           </td>
+                                        </tr>
+                                        <tr>
 
                                           <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Alert&nbsp;</th>
-                                          <td colspan="3">
+                                          <td>
                                               <div class="input-group">
 
                                                   <input id="Alert" name="Alert" type="text" class="form-control" style="width:95%; color:red; font-weight:bold" placeholder="Alert Message" readonly />
@@ -171,7 +181,7 @@
                                       <col style="width:9%" />
                                       <col style="width:24%" />
                                   </colgroup>
-                                  <tbody>
+                                  <tbody hidden="true">
                                       <tr>
                                           <th class="text-right">Bill To/ ship To&nbsp;</th>
                                           <td>
@@ -218,7 +228,7 @@
                               <col style="width:50%" />
                           </colgroup>
                           <tbody>
-                              <tr>
+                              <tr hidden="true">
                                   <th class="text-right">Template&nbsp;</th>
                                   <td>
                                       <div class="input-group">
@@ -239,7 +249,7 @@
                               </tr>
                               <tr>
                                   <th class="text-right">Item Search&nbsp;</th>
-                                  <td>
+                                  <td colspan="2">
                                       <div class="input-group">
                                           <select id="ItemCode" class="form-control" style="width:20%" placeholder="Item Code"></select>&nbsp;
                                           <select id="ItemDesc" class="form-control" style="width:70%" placeholder="Short Description"></select>
