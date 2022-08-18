@@ -102,15 +102,7 @@
                                                                 </td>
                                                                 <!--Additional field to show same order DK 20220715-->
                                                             </tr>
-                                                            <tr>
-                                                                <td style="text-align:left;">
-                                                                    <span class="font-weight-bold">Same Order : </span>
-                                                                        <div class="input-group">
-                                                                            <input id="ddlNO1" type="text" class="form-control" readonly>
-                                                                        </div>
-                                                                </td>
-                                                                <!--END DK 20220715-->
-                                                            </tr>
+
                                                         </table>
 
                                                         <div style="position:relative">
@@ -132,18 +124,23 @@
                                                 <tr>
                                                     <td>
                                                         <span class="font-weight-bold">NO</span>
-                                                    </td>
-                                                    <td>
                                                         <div class="input-group">
                                                             <input id="ddlNO1" type="text" class="form-control" readonly>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td style="text-align:left;">
+                                                        <span class="font-weight-bold">Same Order : </span>
+                                                            <div class="input-group">
+                                                                <input id="ddlNO1" type="text" class="form-control" readonly>
+                                                            </div>
+                                                    </td>
+                                                    <!--END DK 20220715-->
+                                                </tr>
+                                                <tr>
                                                     <td>
                                                         <span class="font-weight-bold">Sales Rep</span>
-                                                    </td>
-                                                    <td>
                                                         <div class="input-group">
                                                             <select id="salesRep1" class="custom-select bg-white" style="width:94%">
                                                                 @foreach (var item in SalesPerson)
@@ -157,8 +154,6 @@
                                                 <tr>
                                                     <td>
                                                         <span class="font-weight-bold">Customer</span>
-                                                    </td>
-                                                    <td>
                                                         <div class="input-group">
                                                             <input id="CustomerNo1" name="CustomerNo" type="text" class="form-control" style="width:66px;" placeholder="Number" readonly>&nbsp;
                                                             <button id="LookupCust1" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
@@ -176,16 +171,12 @@
                                                 <tr>
                                                     <td>
                                                         <span class="font-weight-bold">Weight</span>
-                                                    </td>
-                                                    <td>
                                                         <input id="txtWeight1" class="form-control" type="text" readonly />
                                                     </td>
+                                                  </tr>
                                                     <tr>
-                                                    </tr>
                                                     <td>
                                                         <span class="font-weight-bold">Ship Date</span>
-                                                    </td>
-                                                    <td>
                                                         <div class="input-group">
                                                             <input id="txtSDate1" class="form-control" type="date" value="" />
                                                         </div>
@@ -194,8 +185,6 @@
                                                   <tr>
                                                     <td>
                                                         <span class="font-weight-bold">Note</span>
-                                                    </td>
-                                                    <td>
                                                         <div class="input-group">
                                                             <input id="txtNote1" class="form-control" type="text" />
                                                         </div>
