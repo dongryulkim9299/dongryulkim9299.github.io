@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Tell the browser to be responsive to screen width -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Favicon icon -->
+   <link rel="icon" type="image/png" sizes="16x16" href="/lib/adminmart/assets/images/favicon.png">
+   <title>Harbor Marine Product</title>
+   <meta http-equiv="expires" content="0">
+   <link href="lib/adminmart/dist/css/style.css" rel="stylesheet" />
+   <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+   <link href="lib/tabulator/css/tabulator_bootstrap4.css" rel="stylesheet" />
+   <link href="lib/jquery-ui/jquery-ui.css" rel="stylesheet" />
+   <link href="lib/select2/select2.css" rel="stylesheet" />
+   <link href="lib/select2/select2-bootstrap4.min.css" rel="stylesheet" />
 
+   <!-- Telerik -->
+   <link href="https://kendo.cdn.telerik.com/2019.1.115/styles/kendo.common.min.css" rel="stylesheet" id="common-css" />
+   <link href="https://kendo.cdn.telerik.com/2019.1.115/styles/kendo.blueopal.min.css" rel="stylesheet" id="skin-css" />
+
+   <!-- ============================================================== -->
+   <!-- All Jquery -->
+   <!-- ============================================================== -->
+   <script src="lib/jquery/dist/jquery.min.js"></script>
+   <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="lib/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+   <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+
+   <script src="lib/adminmart/dist/js/app-style-switcher.min.js"></script>
+   <script src="lib/adminmart/dist/js/feather.min.js"></script>
+   <script src="lib/adminmart/dist/js/sidebarmenu.min.js"></script>
+   <script src="lib/adminmart/dist/js/custom.min.js"></script>
+   <script src="lib/tabulator/js/tabulator.js"></script>
+   <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+   <script src="lib/moment.js"></script>
+   <script src="lib/xlsx.full.min.js"></script>
+   <script src="lib/select2/select2.min.js"></script>
+
+   <!--Custom JavaScript -->
+   <link href="css/site.css" rel="stylesheet" asp-append-version="true" />
+   <script src="js/site.js" asp-append-version="true"></script>
+   <script src="js/tabulator-extensions.js" asp-append-version="true"></script>
 <style>
 .thborder {
   border:1px solid;
@@ -9,135 +50,281 @@
 </style>
 <body>
 
-<div>
-  <input type="button" style="float:right; height:30; width:100;" value="NEW"><br></input>
-<table>
-  <tr>
-    <td >Order Date</td>
-    <td ><input id="ShipDateTo" type="date" class="form-control" style="width:170px" value="" /></td>
-    </tr>
-    <tr>
-    <td >Ship Date</td>
-    <td ><input id="ShipDateTo" type="date" class="form-control" style="width:170px" value="" /></td>
-  </tr>
-  <tr>
-    <td> Customer</td>
-    <td><input type="button" name="button" value="Select"></td>
-    </tr>
-    <tr>
-      <td colspan="1">Route</td>
-      <td><select name="route" id="route">
-        <option value="">Select</option>
-        <option value="Bakersfield">Bakersfield</option>
-        <option value="San Diego">San Diego</option>
-        <option value="Santa Monica">Santa Monica</option>
-        <option value="Santa Maria">Santa Maria</option>
-</select></td>
-<tr>
-  <td>Order Comment</td>
-  <td><input type="text" name="" value="write a comment"></td>
-    </tr>
-    <tr>
-      <td>Customer Alert</td>
-      <td colspan="2"><input type="text" name="" value="Alert Message will appear here"></td>
-    </tr>
-    </table>
-    <table>
-    <tr>
-      <td><br><p style="font-size:20px;">Item Search</p></td>
-    </tr>
-    <tr>
-      <td>Item Code</td>
-      <td>
-        <select name="item" id="item">
-          <option value="">Select</option>
-          <option value="SAL001">SAL001</option>
-          <option value="BEEF001">BEEF001</option>
-          <option value="UNI001">UNI001</option>
-          <option value="HAM001">HAM001</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Item Code Description</td>
-      <td>
-        <select name="item" id="item">
-          <option value="">Select</option>
-          <option value="SALMON EXAMPLE">SALMON EXAMPLE</option>
-          <option value="BEEF EXAMPLE">BEEF EXAMPLE</option>
-          <option value="UNI EXAMPLE">UNI EXAMPLE</option>
-          <option value="HAM EXAMPLE">HA EXAMPLE</option>
-        </select>
-      </td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td><br><p style="font-size:20px;">Item Detail</p></td>
-    </tr>
-    <tr>
-      <td>Itemcode</td><td><input type="text" name="" value="code"></td></tr>
-      <tr>
-      <td>Short Description</td><td><input type="text" name="" value="description"></td></tr>
-      <tr>
-      <td>Remark/Comment</td><td><input type="text" name="" value="remark/comment"></td></tr>
-      <tr>
-      <td>Order Quantity</td><td><input type="text" name="" value="Quantity"></td></tr>
-      <tr>
-      <td>um</td><td><select name="um" id="um">
-        <option value="">Select</option>
-        <option value="PC">PC</option>
-        <option value="BX">BX</option>
-        <option value="LB">LB</option>
-      </select></td></tr>
-      <tr>
-      <td>comment</td><td><input type="text" name="" value="comment"></td></tr>
-    </tr>
-    <tr>
-      <td><input type="button" name="button" value="ADD"><input type="button" name="button" value="DELETE"></td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td><br><p style="font-size:20px;">Item table</p></td>
-    </tr>
-    <tr>
-      <th class="thborder">itemcode</th>
-      <th class="thborder">Short Desc</th>
-      <th class="thborder">Remark/Comment</th>
-      <th class="thborder">Qty</th>
-      <th class="thborder">um</th>
-      <th class="thborder">Price</th>
-      <th class="thborder">Comment</th>
-    </tr>
-    <tr>
-      <td class="thborder">SAL001</td>
-      <td class="thborder">SALMON</td>
-      <td class="thborder">FILLET</td>
-      <td class="thborder">2</td>
-      <td class="thborder">PC</td>
-      <td class="thborder">14.99</td>
-      <td class="thborder">comment</td>
-    </tr>
-    <tr>
-      <td class="thborder">HAM001</td>
-      <td class="thborder">HAM</td>
-      <td class="thborder"></td>
-      <td class="thborder">5</td>
-      <td class="thborder">PC</td>
-      <td class="thborder">2.99</td>
-      <td class="thborder">comment</td>
-    </tr>
-  </table>
+  <div id="printArea" class="container-fluid">
+      <div class="row" style="margin-bottom:-27px;">
+          <div class="col-12">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="table-responsive" style="overflow-x:hidden;">
+                          <div id="messageBox" style="color:red;display:none"><ul></ul></div>
+                          <form id="orderForm" name="orderForm" action="/Home/SaveOrder" method="post">
+                              <table class="table-bordered">
+                                  <colgroup>
+                                      <col style="width:9%" />
+                                      <col style="width:16%" />
+                                      <col style="width:9%" />
+                                      <col style="width:16%" />
+                                      <col style="width:9%" />
+                                      <col style="width:16%" />
+                                      <col style="width:9%" />
+                                      <col style="width:16%" />
+                                  </colgroup>
+                                  <tbody>
+                                      <tr>
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order No&nbsp;</th><!--fas fa-asterisk-->
+                                          <td colspan="3">
+                                              <div class="input-group">
+                                                  <input id="SalesOrderNo" name="SalesOrderNo" type="text" class="form-control" style="width:25%">&nbsp;
+                                                  <button id="LookupOrder" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i> LOOK UP</button>&nbsp;
+                                                  <button id="CopyOrder" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-copy"></i> COPY FROM</button>&nbsp;
+                                                  <button id="RefreshOrder" type="button" class="btn btn-rounded waves-effect waves-light btn-sm btn-success"><i class="fas fa-check"></i> NEW</button>&nbsp;
+                                                  <input id="BatchNo" name="BatchNo" type="text" class="form-control" style="width:23%" placeholder="Batch No" readonly>
+                                              </div>
+                                          </td>
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Customer&nbsp;</th>
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i><span id="Customer" style="cursor:pointer">&nbsp;<u>Customer&nbsp;</u></span></th>
+                                          <td colspan="3">
+                                              <div class="input-group">
+                                                  <input id="CustomerNo" name="CustomerNo" type="search" class="form-control" style="width:19%" placeholder="Number" readonly>&nbsp;
+                                                  <button id="LookupCust" type="button" class="btn btn-rounded btn-primary"><i class="fas fa-search"></i>&nbsp;LOOK UP</button>&nbsp;&nbsp;
+                                                  <input id="CustomerName" name="CustomerName" type="text" class="form-control" style="width:43%" alt="this.val()" placeholder="Name" readonly>&nbsp;
 
-  <table>
-    <tr>
-      <input type="button" style="float:right; height:30; width:100;" value="CANCEL"></input>
-    <input type="button" style="float:right; height:30; width:100;" value="SAVE"><br><br></input>
-  </tr>
+                                                  <input id="ContactCode" name="ContactCode" type="text" class="form-control" style="width:19%" readonly>
+                                                  <input id="ARDivisionNo" name="ARDivisionNo" type="hidden">
+                                                  <input id="TaxSchedule" name="TaxSchedule" type="hidden">
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Entry Date&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <input id="OrderDate" name="OrderDate" type="date" style="width: 94%; background-color: lightgray" class="form-control" value="" readonly>
+                                              </div>
+                                          </td>
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Ship Date&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <input id="ShipDate" name="ShipDate" type="date" style="width:94%; color:blue" class="form-control" value="">
+                                              </div>
+                                          </td>
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Order Status&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <div style="width:75%;">
+                                                      <select id="OrderStatus" name="OrderStatus" class="form-control" style="width:100%">
+                                                          <option value="" selected>Choose...</option>
+                                                          @foreach (var item in OrderStatus)
+                                                          {
+                                                              <option value="@item.value">@item.label</option>
+                                                          }
+                                                      </select>
+                                                      <input type="hidden" id="OriginalStatus" name="OriginalStatus" value="N" />
+                                                      <input type="hidden" id="NowStatus" name="NowStatus" value="N" />
+                                                  </div>
+                                                  <div style="width:20%;margin-left:5px;">
+                                                      <button id="btnReason" type="button" class="btn btn-rounded btn-primary" disabled><i class="fas fa-edit"></i></button>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                          <th class="text-right">Route&nbsp;&nbsp;&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <select id="Route" name="Route" class="custom-select bg-white" style="width:94%">
+                                                      <option value="" selected>ALL</option>
+                                                      @foreach (var item in Route)
+                                                      {
+                                                          <option value="@item.value">@item.label</option>
+                                                      }
+                                                  </select>
 
+                                                  <input id="Route" name="Route" type="text" style="width:46%" class="form-control" readonly>
 
-</div>
+                                                  <input id="Driver" name="Driver" type="text" style="width:46%" class="form-control" readonly>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <th class="text-right">Order Comment&nbsp;</th>
+                                          <td colspan="3">
+                                              <div class="input-group">
+                                                  <input id="OrderComment" name="OrderComment" type="text" class="form-control" style="width:98%" maxlength="200" placeholder="MAX 200 LETTER" />
+                                              </div>
+                                          </td>
+
+                                          <th class="text-right"><i class="fas fa-asterisk" style="color:#ff6a00;height:2px;font-size:2px"></i>&nbsp;Alert&nbsp;</th>
+                                          <td colspan="3">
+                                              <div class="input-group">
+
+                                                  <input id="Alert" name="Alert" type="text" class="form-control" style="width:95%; color:red; font-weight:bold" placeholder="Alert Message" readonly />
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              <table class="table-bordered">
+                                  <colgroup>
+                                      <col style="width:9%" />
+                                      <col style="width:21%" />
+                                      <col style="width:9%" />
+                                      <col style="width:28%" />
+                                      <col style="width:9%" />
+                                      <col style="width:24%" />
+                                  </colgroup>
+                                  <tbody>
+                                      <tr>
+                                          <th class="text-right">Bill To/ ship To&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <input id="BillToName" name="BillToName" type="text" style="width:auto" class="form-control" readonly>
+                                              </div>
+                                          </td>
+                                          <th class="text-right">Address&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <input id="BillToAddress1" name="BillToAddress1" type="text" style="width:60%" class="form-control" readonly>&nbsp;
+                                                  <input id="BillToAddress2" name="BillToAddress2" type="text" style="width:30%" class="form-control" readonly>
+                                              </div>
+                                          </td>
+                                          <th class="text-right">City/state/Zip&nbsp;</th>
+                                          <td>
+                                              <div class="input-group">
+                                                  <input id="BillToCity" name="BillToCity" type="text" class="form-control" style="width:45%" readonly>&nbsp;
+                                                  <input id="BillToState" name="BillToState" type="text" class="form-control" style="width:24%" readonly>&nbsp;
+                                                  <input id="BillToZipCode" name="BillToZipCode" type="text" class="form-control" style="width:15%" readonly>
+                                                  <input id="BillToCountryCode" name="BillToCountryCode" type="hidden">
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Item Table -->
+      <div class="row" style="margin-bottom:-27px;">
+          <div class="col-lg-12">
+              <div class="card">
+                  <div class="card-body btn-shadow">
+                      <table class="table-borderless" width="100%">
+                          <colgroup>
+                              <col style="width:9%" />
+                              <col style="width:32%" />
+                              <col style="width:9%" />
+                              <col style="width:50%" />
+                          </colgroup>
+                          <tbody>
+                              <tr>
+                                  <th class="text-right">Template&nbsp;</th>
+                                  <td>
+                                      <div class="input-group">
+                                          <select id="TemplateNo" name="TemplateNo" style="width:30%" class="form-control bg-white">
+                                              <option value="" selected style="padding-top:5px;padding-bottom:5px;">Choose...</option>
+                                          </select>&nbsp;
+                                          <button id="TemplateApply" class="btn btn-rounded btn-success"><i class="fas fa-plus"></i> APPLY</button>&nbsp;
+                                          <!-- Add UpdateTemplate button so user can update specific template they choose-->
+                                          <button id="UpdateTemplate" type="submit" class="btn btn-rounded btn-success"><i class="fa fa-edit"></i>Update Template</button>
+                                      </div>
+
+                                  </td>
+                                  <td class="text-right" colspan="2">
+                                      <button id="ItemInquiry" class="btn btn-rounded btn-success"><i class="fa fa-plus"></i> Item Inquiry</button>
+                                      <button id="HotItemInquiry" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> Hot Item Inquiry</button>
+                                  </td>
+
+                              </tr>
+                              <tr>
+                                  <th class="text-right">Item Search&nbsp;</th>
+                                  <td>
+                                      <div class="input-group">
+                                          <select id="ItemCode" class="form-control" style="width:20%" placeholder="Item Code"></select>&nbsp;
+                                          <select id="ItemDesc" class="form-control" style="width:70%" placeholder="Short Description"></select>
+                                      </div>
+                                  </td>
+                                  <td class="text-right" colspan="2">&nbsp;</td>
+                              </tr>
+                          </tbody>
+                      </table>
+
+                      <div class="table-responsive">
+                          <div id="itemTable" class="table-bordered table-striped"></div>
+                          <table class="table-borderless" width="100%">
+                              <tbody>
+                                  <tr>
+                                      <td class="text-right">
+
+                                          <button id="addRow" class="btn btn-rounded btn-success" accesskey="a"><i class="fa fa-plus"></i> ADD</button>
+                                          <button id="itemReset" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> RESET</button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Order Table -->
+      <div class="row" style="margin-bottom:-20px;">
+          <div class="col-lg-12">
+              <div class="card">
+                  <div class="card-body btn-shadow">
+                      <div id="tabulator-controls" class="row" style="margin-bottom:1px">
+                          <div style="width:40%;margin-left:17px;margin-top:1px;">
+                              <button id="orderDelete" class="btn btn-rounded btn-danger"><i class="fa fa-minus"></i> DELETE</button>
+                              <button id="orderReset" class="btn btn-rounded btn-primary"><i class="fa fa-sync-alt"></i> RESET</button>
+                          </div>
+                          <div style="width:57%;margin-right:5px;margin-top:9px" align="right" class="float-right">
+                          </div>
+                      </div>
+                      <div class="table-responsive">
+                          <div id="orderTable" class="table-bordered table-striped"></div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="card">
+                                  <table class="table table-striped" style="margin-bottom:0px;">
+                                      <colgroup>
+                                          <col style="width:10%" /><!--Subtotal-->
+                                          <col style="width:67%" />
+                                          <col style="width:9%" /><!--Order Total-->
+                                          <col style="width:14%" />
+                                      </colgroup>
+                                      <tbody>
+                                          <tr>
+
+                                              <th style="color:blue">Total Order Line&nbsp;:</th>
+                                              <td><div id="OrderTotal" class="font-weight-bold" style="color:blue"></div></td>
+                                              <th style="color:blue"></th>
+                                              <td></td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div id="tabulator-controls" class="row ui-icon-cir" style="margin-bottom:15px">
+                  <div style="width:100%;margin-right:14px" align="right" class="float-right">
+                      <button id="print" class="btn btn-rounded btn-primary"><i class="fa fa-print"></i>Preview</button>
+                      <button id="cancelOrder" class="btn btn-rounded btn-primary"><i class="fa fa-undo-alt"></i> Cancel Order</button>
+                      <button id="saveOrder" type="submit" class="btn btn-rounded btn-success"><i class="fa fa-save"></i> Save Order</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
 </body>
 </html>
